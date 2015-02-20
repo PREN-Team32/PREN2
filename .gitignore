@@ -1,0 +1,6 @@
+*.aux
+doc/Team.log
+*.out
+doc/Team.synctex.gz
+*.toc
+doc/Team.pdf

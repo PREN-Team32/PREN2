@@ -1,0 +1,232 @@
+
+\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
+                                            % Schriftgrösse = 10Punkte;
+                                            % Mathe.-Gl. Modus = linksbündig
+                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
+
+\usepackage[utf8x]{inputenc}                % utf8x kann alle Textcodierungen interpretieren
+\usepackage[T1]{fontenc} %Schriftcodierung mit UTF-8
+\usepackage{textcomp} %Erweiterung von fontenc
+\usepackage{lmodern} %Erweiterung des Zeichensatzes
+
+\usepackage{graphics}                       % Package für Einfügen/Anpassen von Grafiken
+\usepackage{graphicx}
+\usepackage{wrapfig}                        % Package zum Einfügen von Textumflossenen Bilder
+
+\usepackage[english,ngerman]{babel}         % ngerman = Neues Deutsch; babel = internationalisierung einschalten
+\usepackage[babel,german=quotes]{csquotes}  % Deutsche Gänsefüssechen
+
+\usepackage{hyperref}
+
+\usepackage{amsmath}                        
+\usepackage[all]{xy}
+%\usepackage[xindy]{glossaries}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{printlen}
+
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+\usepackage{multicol}
+
+\usepackage{multirow}
+
+\usepackage{verbatim}
+
+\usepackage{color}
+
+\usepackage{eurosym}
+
+%\usepackage{hyperref}
+\usepackage{acronym}
+
+\usepackage{enumitem}
+
+\usepackage{setspace}
+
+\usepackage{threeparttable} %benötigt um Fussnoten in einer Tabelle zu machen
+\usepackage{longtable}
+\usepackage{subfigure}
+
+
+\usepackage{spreadtab} %benötigt um in Tabellen zu rechnen
+\usepackage{numprint}
+
+%Package damit eine Seite quer genommen werden kann
+\usepackage{lscape}
+
+%Damit man eine Zelle farbig markiert werden
+\usepackage{colortbl}
+
+    \usepackage{tikz}           % TikZ - "TikZ ist kein Zeichenprogramm"
+   % \usepackage{wrapfig} 
+    \usetikzlibrary{tikzmark}   % References for hooking tikz graphics to
+    
+    \usetikzlibrary{decorations.pathmorphing}
+    \usetikzlibrary{decorations.pathreplacing}
+%
+% Rechnen in Tabellen. Zeichen für den Dezimalpunkt
+%
+\STsetdecimalsep{{.}}
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX}
+\lstloadlanguages{TeX}
+\lstset{basicstyle=\ttfamily\footnotesize,
+        numbers=left,
+        numberstyle=\tiny,
+        numbersep=5pt,
+        breaklines=true,
+        texcsstyle=\color{black},
+        backgroundcolor=\color{gray!10},
+        %commentstyle=\color{darkgreen},
+        %keywordstyle=\color{red}\bfseries,
+        %stringstyle=\color{blue}\bfseries,
+        frame=single,
+        tabsize=2,
+        rulecolor=\color{black!30},
+        title=\lstname,
+        escapeinside={\%*}{*)},
+        breaklines=true,
+        breakatwhitespace=true,
+        framextopmargin=2pt,
+        framexbottommargin=2pt,
+        inputencoding=utf8x,
+        extendedchars=true,
+        literate={Ö}{{\"O}}1
+                 {Ä}{{\"A}}1
+                 {Ü}{{\"U}}1
+                 {ü}{{\"u}}1
+                 {ä}{{\"a}}1
+                 {ö}{{\"o}}1 
+       }
+%
+% hypersetup etwas genauer
+%
+\hypersetup{pdftex=true,
+            hyperfigures=true,
+            hyperindex=true,
+            bookmarks=true,
+            bookmarksopen=true,
+            bookmarksnumbered=true,
+            %pdfborder={0 0 0},
+            hypertexnames=true,
+            colorlinks=true,
+            pagebackref=false,
+            linktocpage=false,% link "`behing"'
+            plainpages=false,
+            linkcolor=black,%blue,
+            %anchorcolor=black,% Color for anchor text.
+            citecolor=black,%green,%Color for bibliographical citations in text.
+            filecolor=black,%magenta,%Color for URLs which open local files.
+            menucolor=black,%red,%Color for Acrobat menu items. pagecolor color red Color for links to other pages, but currently unused
+            urlcolor=black,%red,
+            pdfstartview=Fit,
+            pdfview={XYZ null null null},
+            pdfpagelabels,
+            pageanchor=true,
+            hypertexnames=false
+           }
+%
+% hypersetup etwas rudimentärer
+%
+%{
+    %colorlinks,
+    %citecolor=black,
+    %filecolor=black,
+    %linkcolor=black,
+    %urlcolor=black
+%}
+
+\usepackage{url}
+
+\usepackage{cite}
+\usepackage{apacite}
+
+\usepackage{ulem} % zum unterstreichen
+
+\usepackage{pdfpages}                        % Packet für PDF Dateimanipulation laden
+
+\usepackage{fancyhdr}                        % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
+
+\usepackage{siunitx}                         % benötigt um Tabellen nach einem . auszurichten
+
+
+\bibliographystyle{apacite}
+
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+
+\addtolength{\textwidth}{1.5cm}
+\addtolength{\evensidemargin}{-5mm}
+\addtolength{\oddsidemargin}{-5mm}
+
+\addtolength{\headwidth}{1.5cm}
+
+%\rhead{\setlength{\unitlength}{1mm}
+%\begin{picture}(-2,7)
+%    \includegraphics[width=35mm]{hslu_logo2.PNG}
+%\end{picture}}
+
+\fancyhead[L]{Projektarbeit: Autonomer Ballwerfer} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+\fancyhead[R]{HSLU - T\&A}
+%\fancyhead[R]{\includegraphics[scale=0.25]{hslu_logo2.PNG}}
+\renewcommand{\headrulewidth}{0.4pt} % obere Trennlinie
+\fancyfoot[L]{PREN Team 32}
+\fancyfoot[C]{HS - 2014}
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} % untere Trennlinie
+
+%
+% Anpassung der Darstellung des Literaturverzeichnis
+%
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+  \oldbibliography{#1}%
+  \setlength{\itemsep}{10pt}%
+}
+%
+% Abbildungen und Tabellen nur mit Kurzform angeben
+%
+\addto\captionsngerman{
+\renewcommand{\figurename}{Abb.}
+\renewcommand{\tablename}{Tab.}
+}
+%
+% Benötigt um von zwei Stellen im Text auf dieselbe Fusszeile zu referenzieren
+%
+\newcommand{\footnoteremember}[2]{%
+  \footnote{#2\label{#1}}
+  \newcounter{#1}
+  \setcounter{#1}{\value{footnote}}
+}
+\newcommand{\footnoterecall}[1]{%
+  \hyperref[#1]{\footnotemark[\value{#1}]}
+} 
+\makeatletter
+\providecommand{\rowno}[1][__empty__]
+{%
+  \ifthenelse{\isundefined{\c@rowno}}
+  {%
+    \newcounter{rowno}
+  }
+  {}%
+  	\ifthenelse{\equal{#1}{__empty__}}
+ 	 {%
+       \stepcounter{rowno}%
+     }
+     {%
+ 	   \setcounter{rowno}{#1}%
+     }%
+  \therowno%
+}
+\makeatother
+%
+%\makeglossaries
+%\include{wa/wa_glossar}
+%
