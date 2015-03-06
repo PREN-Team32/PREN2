@@ -1,0 +1,33 @@
+\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
+%                                            % Schriftgrösse = 10Punkte;
+%                                            % Mathe.-Gl. Modus = linksbündig
+%                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
+%
+\usepackage{../common/layout}
+
+\newcommand{\myTitel}{Das Team 32}
+\newcommand{\myDokumentTyp}{Teamvorstellung}
+\begin{document}
+    %
+    % Deck- und Titelblatt
+    %
+    \input{../common/Deckblatt}
+    \input{../common/Titelblatt}
+    %
+    % Inhlatsverzeichnis umbenennen und anschliessend einen Seitenumbruch
+    %   
+    \renewcommand{\contentsname}{Inhalt}
+    \tableofcontents
+    \newpage 
+    %
+    % Start mit der eigentlichen Arbeit
+    %    
+    \input{DasTeam/Personalblatt}
+    \newline
+    \newline
+    \newline
+    \input{DasTeam/Teamcharta}
+    \input{DasTeam/Organisation}
+    \input{DasTeam/Zielsetzung}
+\end{document}
+ No newline at end of file
