@@ -21,4 +21,35 @@
     einem geregelten Förderband. Das Förderband transportiert die Bälle mit einer 
     konstanter Geschwindigkeit zu den Beschleunigungsräder, damit alle Tennisbälle die 
     gleiche Startenergie aufweisen. Dadurch ist eine gleichmässige Wurfweite und eine 
-    hohe Reproduzierbarkeit gewährleistet.\\
+    hohe Reproduzierbarkeit gewährleistet.
+
+    \subsection{Hauptcontroller}
+        Die gesamte Hardware wird über das Freedom Board\footnote{Development-Board vom 
+        Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat ein internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
+        \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
+        der Host mit dem Board kommuniziert. Die Software des Boards besteht aus einem 
+        Betriebssystem, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
+        und die angekommenen Befehle ausführt. Ein wichtiger nur einmal gebrauchter Task 
+        ist die Initialisierung des Stepperboards, siehe Anhang (??). Der Controller 
+        verfügt über zwei SPI-Schnittstellen. Am einen ist das besagte Stepperboard und 
+        an der Anderen die beiden Brushless-Boards angeschlossen. Weiter ist ein PWM-Port 
+        verwendet, um den Motor der Ballnachführung anzutreiben, siehe Kapitel 
+        \ref{sec:Foerderband}.        
+    \subsection{Spannungsversorgung}       
+        \begin{wrapfigure}{r}{0.35\textwidth}
+           	\includegraphics[width=0.35\textwidth,clip,trim=0mm 2mm 0mm 1mm]
+           	{Enddokumentation/Bilder/BeschaltungNetzteile.png}
+           	\centering
+           	\caption{Schema der Spannungsversorgung} 
+           	\label{abb:Spannungsversorgung}
+        \end{wrapfigure}
+        Gemäss Datenblatt sind die verwendeten Brushless-Motoren mit einer Versorgungsspannung 
+        von $12\si{\volt}$ bei einem maximalen Strom von $11\si{\ampere}$ spezifiziert. 
+        Der Steppermotor und der DC-Motor sind gemäss Datenblatt für eine Betriebsspannung 
+        von $24\si{\volt}$ ausgelegt. Die Spannungsversorgung werden mit zwei Server-Netzteile 
+        realisiert, die je $12\si{\volt}$ mit maximal $60\si{\ampere}$ liefern. Aus 
+        Sicherheitsgründen wird für jeden Motor eine separate Sicherung verwendet. Das Schema 
+        in Abbildung \ref{abb:Spannungsversorgung} zeigt, wie die Spannungsversorgung 
+        realisiert ist. Das Freedom-Board wird über USB vom Akkumulator des Smartphone 
+        gespeist. Sämtliche Datenblätter zu den verwendeten Motoren sind im Anhangsdokument 
+        angefügt.
