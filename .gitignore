@@ -7,3 +7,5 @@ doc/Team.pdf
 doc/Dokumentation.synctex.gz
 doc/Dokumentation.pdf
 doc/Dokumentation.log
+*.blg
+*.bbl

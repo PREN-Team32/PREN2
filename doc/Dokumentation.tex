@@ -4,10 +4,13 @@
 %                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
 %
 \usepackage{../common/layout}
+\input{Enddokumentation/ET-Gruppe/variables}
 
 \newcommand{\myTitel}{Realisierung eines\\
 autonomen Ballwerfers}
 \newcommand{\myDokumentTyp}{Schlussdokumentation}
+\setboolean{STANDALONE}{false}
+\setboolean{EMBED}{true}
 \begin{document}
     %
     % Deck- und Titelblatt
@@ -35,14 +38,28 @@ autonomen Ballwerfers}
     \input{Enddokumentation/Beschleunigungsraeder}
     \input{Enddokumentation/PlanungManagement}
     \input{Enddokumentation/Schlussdiskussion}
-       
-   
-   
     
     %Beginn Testbericht
-    
     \input{Testberichte/Klebeversuch}
     \input{Testberichte/Fuehrungsschaufel}
     \input{Testberichte/Foerderband}
     
+    
+    % % % %
+    \begin{flushleft}
+        \setlength\bibitemsep{2\itemsep}
+        \nocite{*} %Alle Quellen ausgeben
+        \renewcommand{\refname}{Literatur- und Quellenverzeichnis}
+%        \{\refname}{Quellenverzeichnis}
+        \bibliography{Enddokumentation/ET-Gruppe/et-gruppe_source,../common/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
+    \end{flushleft}
+    %
+    % Beginn des Anhangs
+    %
+    \appendix      
+   	\begin{appendix}
+   		\clearpage
+   		\pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
+   		\section{Anhang}
+   	\end{appendix}  
 \end{document}
