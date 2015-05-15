@@ -18,7 +18,7 @@
     über eine Übersetzung mit einem Brushlessmotor auf Touren gebracht. Die Schwungräder 
     drehen gegenläufig und die Tennisbälle werden dazwischen hindurchgeführt und 
     abgeworfen. Die Zuführung der Tennisbälle zu den Beschleunigungsräder erfolgt mit 
-    einem geregelten Förderband. Das Förderband transportiert die Bälle mit einer 
+    einem Förderband. Das Förderband transportiert die Bälle mit einer 
     konstanter Geschwindigkeit zu den Beschleunigungsräder, damit alle Tennisbälle die 
     gleiche Startenergie aufweisen. Dadurch ist eine gleichmässige Wurfweite und eine 
     hohe Reproduzierbarkeit gewährleistet.
@@ -27,7 +27,7 @@
         Die gesamte Hardware wird über das Freedom Board\footnote{Development-Board vom 
         Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat ein internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
         \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
-        der Host mit dem Board kommuniziert. Die Software des Boards besteht aus einem 
+        der Host mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
         Betriebssystem, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
         und die angekommenen Befehle ausführt. Ein wichtiger nur einmal gebrauchter Task 
         ist die Initialisierung des Stepperboards, siehe Anhang (??). Der Controller 
