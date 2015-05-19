@@ -1,0 +1,65 @@
+\subsection{Vom Winkel zum Board}
+
+\begin{figure}[h!]
+	\includegraphics[width=0.5\textwidth,clip,trim=20mm 120mm 100mm 40mm]  % trim=l b r t
+	{Enddokumentation/Bilder/UebersichtWinkelberechnung.pdf}
+	\centering
+	\caption{Übersichtsskizze zur Winkelberechnung}
+	\label{abb:UebersichtWinkelberechnung}
+\end{figure}
+
+Der Detektor erstellt ein Schwarz/Weiss Bild (hier ein SW Bildes!!), welches den oberen Rand des Kübels zeigt. 
+Um das Gerät auf den Kübel auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) errechnet werden, 
+damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors umrechnen kann.
+\newline
+\newline
+Aus diesem Bild wird nun mittels Trigonometrie der Winkel berechnet. 
+Dazu wird zuerst die Länge Gegenkathete (siehe G in Abbildung \ref{abb:UebersichtWinkelberechnung}) 
+aus dem Schwarz/Weiss Bild errechnet. Mittels Schwerpunktbestimmung von weissen zu schwarzen Pixel auf dem Bild wird entschieden, 
+in welcher Spielhälfte sich der Kübel befindet. Ausgehend vom der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
+Kübels bestimmt werden. Diese Länge liegt zuerst als Anzahl Pixel vor, 
+  kann anschliessend mit einem (variablen) Umrechnungsverhältnis Pixel zu Zentimeter in Zentimeter umgerechnet werden.
+Die Ankathete (siehe A in \ref{abb:UebersichtWinkelberechnung}) ist durch das Spielfeld auf die Länge von 170 cm fixiert. 
+Mit diesen beiden Werten lässt sich nun mit dem Arkustangens der resultierende Winkel errechnen.
+\newline
+\newline
+// Hier Code Snippet als Bild vom AngleCalculator?
+\newline
+\newline
+Dieser Winkel kann mit dem Umrechnungsverhältnis (siehe Kapitel \ref{sec:Aufloesung}) von Microsteps zu Grad 
+in die Anzahl Schritte für den Schrittmotor umgewandelt werden. Um die Drehrichtung des Schrittmotors festzulegen, besteht der 
+Befehl des Schrittmotors aus einer Drehrichtung und der Anzahl Schritte. Hat der Winkel einen positiven Wert, muss der Anzahl 
+Schritte für den Schrittmotor ein „r“ für die Drehrichtung vorangestellt werden, ist der Winkel negativ, ein „f“ 
+(siehe Abbildung \ref{abb:UebersichtWinkelberechnung}).  
+\newline
+\newline
+Nähere Angaben zum Schrittmotor und dessen Ansteuerung sind im Anhang in der Dokumentation des Steppers der ET Gruppe verfügbar.
+\newline
+\newline
+Sollte als Beispiel der errechnete Winkel -7,8° sein, würde das Freedom-Board vom Android-Phone folgenden 
+Befehl erhalten: f 15320 (Umrechnungsverhältnis: 1° entspricht 1964 Microsteps).
+\newline
+\newline
+Da die Hypotenuse mit der Länge der Gegenkathete und damit auch mit grösserem Winkel ?? linear, exponentiell,.. ?? an Länge zunimmt, 
+hat dies auch eine Verlängerung der Wurfdistanz zur Folge. Um diesem Umstand Rechnung zu tragen, muss die Drehzahl des 
+Brushless-DC-Motors entsprechend dem Winkel angepasst werden. Weil das Gerät symmetrisch in der Mitte des Spielfelds platziert ist, 
+kann das Vorzeichen des Winkels ausser Acht gelassen werden, denn auf beide Seiten nimmt die Distanz im selben Masse zu.
+Dazu wird die folgende Formel verwendet (Die gilt nur bei linearem Anstieg):
+\newline
+\newline
+Formel (muss noch verifiziert werden)
+ 
+ \begin{equation}
+ \text{RPM = min. RPM + } \left( \frac{\text{max. RPM - min. RPM}}{\text{max. Winkel}} \cdot \text{|berechneter Winkel|} \right)
+ \end{equation}
+ 
+Um den Zeitverlust möglichst klein zu halten, wird die neu errechnete Umdrehungszahl sofort nach erhalten des Winkels an das 
+Freedom-Board gesendet, damit die Motoren auf die neue Drehzahl beschleunigt werden können,.
+Nachdem das Gerät ausgerichtet ist und die Brushless-DC-Motoren die neu errechnete Drehzahl erreicht haben, kann das Förderband 
+für die Ballzuführung eingeschaltet werden. Dies erfolgt mit einem simplen Befehl „DC setpwm <Wert>“. 
+Um alle Motoren, welche noch in Betrieb sind, abzuschalten, muss noch eine Serie von Shutdown-Befehlen an das 
+Freedom-Board gesendet werden. 
+
+
+            
+            
