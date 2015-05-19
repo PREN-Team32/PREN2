@@ -11,7 +11,7 @@ für den USB-Port eines Android-Gerätes. Dieser Serial Controller erlaubt es pr
 Methode können nun anschliessend Bytes gesendet werden. Um ein ressourcenfressendes Pollen am Eingang zu vermeiden, 
 bietet die Library eine Callback-Funktion, die aufgerufen wird, wenn Daten am Eingang eintreffen.
 \newline
-Mit dem Programmieren und Erstellen eines ersten Prototyps (Apps) musste die Frage geklärt werden, 
+Mit dem Programmieren und Erstellen eines ersten Prototyps (Android App, siehe Abbildung \ref{abb:ScreenshotSerialPortExample}) musste die Frage geklärt werden, 
 ob mit der support-library das Senden eines einzelnen Strings (Char) zum Freedom-Board und das Echo des 
 Boards auf dem Bildschirm des Smartphones ausgegeben werden kann. Nach einem Testlauf zeigte sich, dass
 das Senden des Chars soweit nachvollziehbar einwandfrei funktioniert. Beim Empfangen der Daten zeigte 
@@ -22,6 +22,13 @@ Das hatte zur Folge, dass gewisse Buchstaben oder Zahlen nicht mehr korrekt in A
 umgewandelt werden konnten. Bei einer Handvoll Buchstaben und Zahlen (f, z, o, w, 2-8) funktionierte die
 Echo-Methode einwandfrei, bei allen anderen Zeichen jedoch nicht.
 \newline
+\begin{figure}[h!]
+	\includegraphics[width=0.3\textwidth,clip,trim=0mm 0mm 0mm 0mm]
+	{Enddokumentation/Bilder/Screenshot_SerialPortExample_debug.png}
+	\centering
+	\caption{Screenshot Prototypen-App zur USB Kommunikation}
+	\label{abb:ScreenshotSerialPortExample}
+\end{figure}
 \newline
 Nach einem Update Mitte Februar 2015 durch den Entwickler der support-library funktioniert die App nun 
 in bidirektionaler Richtung ohne Einschränkungen. Teil des Updates (respektive einziger Grund) war die 
