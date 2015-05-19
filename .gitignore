@@ -9,3 +9,4 @@ doc/Dokumentation.pdf
 doc/Dokumentation.log
 *.blg
 *.bbl
+common/texput.log
