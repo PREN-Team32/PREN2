@@ -3,8 +3,7 @@ Um verschiedene Befehle und den vom Detektor berechneten Winkel vom Android-Phon
 zu senden, wird eine USB\footnote{Universal Serial Bus}-Schnittstelle zwischen diesen zwei Geräte verwendet.
 \newline
 Da Android keine native Anbindung an MicroController-Boards via USB zur Verfügung stellt, muss auf 
-Frameworks von Drittanbietern zugegriffen werden. In unserem Fall verwenden wir UsbSerial (
-\url{https://github.com/felHR85/UsbSerial/releases/tag/2.2}) als support-library, wie im Namen ersichtlich, 
+Frameworks von Drittanbietern zugegriffen werden. In unserem Fall verwenden wir UsbSerial \cite{Inf:UsbSerial} als support-library, wie im Namen ersichtlich, 
 handelt es sich dabei um eine virtuelle serielle Schnittstelle (COM-Schnittstelle \footnote{Component Object Model})
 für den USB-Port eines Android-Gerätes. Dieser Serial Controller erlaubt es programmatisch alle nötigen Konfigurationen 
 (Baudrate, Databit, Stopbits, Paritybit, Flowcontrol) für das Board zu setzen. Mittels einer einzigen 
@@ -47,4 +46,4 @@ des Motors für das Förderband gemeint. Nach dem Ausführen ihrer Aufgabe müss
 ausgeschaltet werden, das wiederum vom Android-Phone aus passiert.
 \newline
 \newline
-// evtl Code-Snippet?
+// evtl Code-Snippet??
