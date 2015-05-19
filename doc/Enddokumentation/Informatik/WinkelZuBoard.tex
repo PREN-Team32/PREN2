@@ -8,7 +8,7 @@
 	\label{abb:UebersichtWinkelberechnung}
 \end{figure}
 
-Der Detektor erstellt ein Schwarz/Weiss Bild (hier ein SW Bildes!!), welches den oberen Rand des Kübels zeigt. 
+Der Detektor erstellt ein Schwarz/Weiss Bild (hier ein SW Bildes??), welches den oberen Rand des Kübels zeigt. 
 Um das Gerät auf den Kübel auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) errechnet werden, 
 damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors umrechnen kann.
 \newline
@@ -23,21 +23,21 @@ Die Ankathete (siehe A in \ref{abb:UebersichtWinkelberechnung}) ist durch das Sp
 Mit diesen beiden Werten lässt sich nun mit dem Arkustangens der resultierende Winkel errechnen.
 \newline
 \newline
-// Hier Code Snippet als Bild vom AngleCalculator?
+// Hier Code Snippet als Bild vom AngleCalculator??
 \newline
 \newline
 Dieser Winkel kann mit dem Umrechnungsverhältnis (siehe Kapitel \ref{sec:Aufloesung}) von Microsteps zu Grad 
 in die Anzahl Schritte für den Schrittmotor umgewandelt werden. Um die Drehrichtung des Schrittmotors festzulegen, besteht der 
 Befehl des Schrittmotors aus einer Drehrichtung und der Anzahl Schritte. Hat der Winkel einen positiven Wert, muss der Anzahl 
-Schritte für den Schrittmotor ein „r“ für die Drehrichtung vorangestellt werden, ist der Winkel negativ, ein „f“ 
+Schritte für den Schrittmotor ein  \enquote{r} für die Drehrichtung vorangestellt werden, ist der Winkel negativ, ein  \enquote{f} 
 (siehe Abbildung \ref{abb:UebersichtWinkelberechnung}).  
 \newline
 \newline
 Nähere Angaben zum Schrittmotor und dessen Ansteuerung sind im Anhang in der Dokumentation des Steppers der ET Gruppe verfügbar.
 \newline
 \newline
-Sollte als Beispiel der errechnete Winkel -7,8° sein, würde das Freedom-Board vom Android-Phone folgenden 
-Befehl erhalten: f 15320 (Umrechnungsverhältnis: 1° entspricht 1964 Microsteps).
+Sollte als Beispiel der errechnete Winkel $-7,8\si{\degree}$ sein, würde das Freedom-Board vom Android-Phone folgenden 
+Befehl erhalten: f 15320 (Umrechnungsverhältnis: $1\si{\degree}$ entspricht 1964 Microsteps).
 \newline
 \newline
 Da die Hypotenuse mit der Länge der Gegenkathete und damit auch mit grösserem Winkel ?? linear, exponentiell,.. ?? an Länge zunimmt, 
@@ -49,14 +49,14 @@ Dazu wird die folgende Formel verwendet (Die gilt nur bei linearem Anstieg):
 \newline
 Formel (muss noch verifiziert werden)
  
- \begin{equation}
- \text{RPM = min. RPM + } \left( \frac{\text{max. RPM - min. RPM}}{\text{max. Winkel}} \cdot \text{|berechneter Winkel|} \right)
- \end{equation}
+\begin{equation}
+RPM = RPM_{min} +  \left( \frac{RPM_{max} -RPM_{min}}{Winkel_{max}} \cdot |\text{berechneter Winkel}| \right)
+\end{equation}
  
 Um den Zeitverlust möglichst klein zu halten, wird die neu errechnete Umdrehungszahl sofort nach erhalten des Winkels an das 
 Freedom-Board gesendet, damit die Motoren auf die neue Drehzahl beschleunigt werden können,.
 Nachdem das Gerät ausgerichtet ist und die Brushless-DC-Motoren die neu errechnete Drehzahl erreicht haben, kann das Förderband 
-für die Ballzuführung eingeschaltet werden. Dies erfolgt mit einem simplen Befehl „DC setpwm <Wert>“. 
+für die Ballzuführung eingeschaltet werden. Dies erfolgt mit einem simplen Befehl \enquote{DC setpwm <Wert>}. 
 Um alle Motoren, welche noch in Betrieb sind, abzuschalten, muss noch eine Serie von Shutdown-Befehlen an das 
 Freedom-Board gesendet werden. 
 
