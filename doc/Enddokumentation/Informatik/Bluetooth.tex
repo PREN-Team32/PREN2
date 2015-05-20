@@ -1,0 +1,7 @@
+\subsection{Bluetooth}
+Via Bluetooth konnten die serialisierten Objekte zwischen AndroidApp und DesktopApp gesendet und empfangen werden. 
+Da Java keine native Bluetooth Kommunikation ermöglicht wurde auf der Desktopp Seite auf die BlueCove Libary zugegriffen. Da der letzte release der BlueCove libary nicht mehr mit 64-Bit Systemen funktionierte wurde ein Snapshot verwendet welcher auch auf 64-Bit Systemen funktioniert allerdings nicht „offiziell“ releaset wurde. Google stellt bei der Programmierung eine native Bluetooth Libary zur Verfügung weshalb dort jene direkt verwendet wurde. 
+Bei der Implementation kamen einige Probleme auf, was mit der eher dürftigen Dokumentation der BlueCove Libary sowie keinerlei Erfahrung vorgängig erklärt werden konnte. Schlussendlich konnten die serialisierten Objekte, ConfigItem und ValueItem gesendet bzw. empfangen werden.
+Allerdings konnte nur jeweils ein Objekt gesendet werden pro aufgebauter Bluetooth Verbindung, falls ein zweites mal versucht wurde ein ValueItem von der AndroidApp zur DesktopApp zu schicken wurde das Objekt nicht erkannt da der Stream noch die Infomraitonen des vorher gesendeten ValueItems enthielt. Da keine Möglichkeit gefunden wurde den Stream zu flushen oder eine neue Verbindung aufzubauen ohne das Pairing manuell zu bestätigen wurde Bluetooth nicht weiterverfolgt und die alternative, Websockets (Wireless) gewählt. 
+
+            

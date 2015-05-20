@@ -1,0 +1,8 @@
+\subsection{Wireless Kommunikation}
+
+Die Kommunikation findet über Websockets statt und das Verbindungsmedium ist Wireless-LAN. Es wird ein serialisiertes Objekt (ConfigItem) zur AndroidApp geschickt welche die erhaltenen Daten auswertet und dementsprechend ein Bild schiesst. Das Bild wird serialisiert und zur DestopApp zurückgeschickt.
+Da auf beiden Seiten mit Java gearbeitet wird kann das Java interne Framework „Java.net.Socket“ verwendet werden. 
+Die AndroidApp fungiert dabei als Server und wartet auf eine eingehende Verbindung welche von der Desktop Seite aus geöffnet wird. Über einen Input- und OutputStream werden die serialisierten Objekte über die dann geöffnete Verbindung gesendet bzw. empfangen. Die Übertragung der Objekte läuft sehr schnell selbst wenn grosse Bilder übertragen werden, die Übertragungsgeschwindigkeit ist abhängig vom Netzwerk. 
+Da der Desktop den Client stellt muss dieser die Verbindung via IP auf das Smartphone herstellen, dies wurde so gewählt damit das Smartphone zum Testen und für den realen Durchgang möglichst wenig „in die Hand genommen“ werden muss. So muss nun nur die App gestartet und die Verbindung geöffnet werden, danach kann das Smartphone in die Halterung eingefügt werden ohne das zusätzlich etwas an diesem eingestellt werden muss. 
+
+            
