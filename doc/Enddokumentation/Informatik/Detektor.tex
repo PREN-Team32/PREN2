@@ -1,9 +1,13 @@
 \subsection{Detektor}
-	Für die Bestimmung der Position des Korbes wurde ein Algorithmus 
-	eigens entwickelt und in Java implementiert. Auf die Verwendung eines 
-	Frameworks (wie beispielsweise OpenCV) wurde verzichtet. Grund dafür 
+	Für die Bestimmung der Position des Korbes wurde eigens ein Algorithmus 
+	entwickelt und in Java implementiert. Auf die Verwendung eines 
+	Frameworks (wie beispielsweise OpenCV \footnote{Open Source Computer Vision}) 
+	wurde verzichtet. Grund dafür 
 	liegt in der statischen Problemstellung: Hintergrund, Korbform und -farbe 
-	sind immer gleich, was die Problemstellung stark vereinfacht und die Verwendung eines komplexeren Algorithmus hinfällig macht. Somit kann die Erkennungsmechanik einfach und statisch gehalten werden. Unterstützt wird diese Entscheidung auch durch den grösseren Lerneffekt, welche eine Eigenproduktion mit sich bringt. \\
+	sind immer gleich, was die Problemstellung stark vereinfacht und die Verwendung 
+	eines komplexeren Algorithmus hinfällig macht. Somit kann die Erkennungsmechanik 
+	einfach und statisch gehalten werden. Unterstützt wird diese Entscheidung auch
+	 durch den grösseren Lerneffekt, welche eine Eigenproduktion mit sich bringt. \\
 	\\
 	Der Algorithmus 
 	basiert auf der Tatsache, dass der Korb deutlich dunkler als der 
@@ -13,18 +17,21 @@
 	Bildbereich links und rechts deutlich über das Spielfeld 
 	hinaus, was das Resultat verfälschen könnte. Als zweiter Schritt wird 
 	über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die 
-	Helligkeit anhand einer vordefinierten Schwelle bestimmt, ob es zum 
-	Hintergrund (heller) oder zum Korb (dunkel) gehört. Zur Bestimmung der Helligkeit eines Pixels anhand eines RGB Wertes gibt es mehrere Möglichkeiten, welche sich in Genauigkeit und Performance unterscheiden \cite{S:RGB}. Ein genügend hoher 
+	Helligkeit anhand einer vordefinierten, variablen Schwelle bestimmt, ob es zum 
+	Hintergrund (heller) oder zum Korb (dunkel) gehört. Zur Bestimmung der Helligkeit 
+	eines Pixels anhand eines RGB Wertes gibt es mehrere Möglichkeiten, welche sich in 
+	Genauigkeit und Performance unterscheiden \cite{S:RGB}. Ein genügend hoher 
 	Kontrast ist an dieser Stelle entscheidend. Vor allem Schattenwürfe durch 
 	seitliche Beleuchtung stellen ein Problem dar. Deshalb wurde bereits in PREN 1 diesbezüglich 
-	ein erster Test des entwickelten Prototypen mit zwei Scheinwerfern 
+	ein erster Test des entwickelten Prototypen mit vier Scheinwerfern 
 	durchgeführt. Als nächster Schritt 
 	wird der Schwerpunkt der dunklen Pixel bestimmt und anhand des gefundenen 
 	Schwerpunktes entweder von links oder von rechts her in einem bestimmten 
 	horizontalen Bereich (der Korb befindet sich immer auf der selben Höhe)
-	über die Pixel iteriert um dabei eine feste Kontur zu finden. Die Fixierung auf einen horizontalen Bereich erhöht zusätzlich die Effizienz des Algorithmus. Diese feste 
+	über die Pixel iteriert, um dabei eine feste Kontur zu finden. Die Fixierung auf 
+	einen horizontalen Bereich erhöht zusätzlich die Effizienz des Algorithmus. Diese feste 
 	Kontur wird dabei definiert durch eine bestimmte Anzahl weisse Pixel, auf 
 	welche wiederum eine Menge schwarzer Pixel folgen muss. Da dieser Prozess 
-	immer in derselben horizontalen Ebene stattfindet kann durch eine 
+	immer in derselben horizontalen Ebene stattfindet, kann durch eine 
 	abschliessende Berechnung der Mittelpunkt des Korbes und der damit 
 	verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.
