@@ -22,7 +22,17 @@
 	wird der Schwerpunkt der dunklen Pixel bestimmt und anhand des gefundenen 
 	Schwerpunktes entweder von links oder von rechts her in einem bestimmten 
 	horizontalen Bereich (der Korb befindet sich immer auf der selben Höhe)
-	über die Pixel iteriert um dabei eine feste Kontur zu finden. Die Fixierung auf einen horizontalen Bereich erhöht zusätzlich die Effizienz des Algorithmus. Diese feste 
+	über die Pixel iteriert um dabei eine feste Kontur zu finden. Die Fixierung auf einen horizontalen Bereich erhöht zusätzlich die Effizienz des Algorithmus. 
+	
+	\begin{figure}[h!]
+		\includegraphics[width=1 \textwidth,clip] 
+		{Enddokumentation/Bilder/EditedPicture.jpg}
+		\centering
+		\caption{zugescnhittenes Schwarz / Weiss Bild des Detektors}
+		\label{abb:editedPicture}
+	\end{figure}
+	
+	Diese feste 
 	Kontur wird dabei definiert durch eine bestimmte Anzahl weisse Pixel, auf 
 	welche wiederum eine Menge schwarzer Pixel folgen muss. Da dieser Prozess 
 	immer in derselben horizontalen Ebene stattfindet kann durch eine 
