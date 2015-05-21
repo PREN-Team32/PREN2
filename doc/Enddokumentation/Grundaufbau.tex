@@ -65,15 +65,15 @@
 		
 		
     \subsection{Hauptcontroller}
-        Die gesamte Hardware wird über das Freedom Board\footnote{Development-Board vom 
-        Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat ein internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
+        Die gesamte Hardware wird über das Freedom-Board\footnote{Development-Board vom 
+        Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat einen internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
         \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
-        der Host mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
+        das Smarphone mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
         Betriebssystem, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
-        und die angekommenen Befehle ausführt. Ein wichtiger nur einmal gebrauchter Task 
+        und die angekommenen Befehle ausführt. Ein wichtiger, nur einmal gebrauchter Task, 
         ist die Initialisierung des Stepperboards, siehe Anhang (??). Der Controller 
-        verfügt über zwei SPI-Schnittstellen. Am einen ist das besagte Stepperboard und 
-        an der Anderen die beiden Brushless-Boards angeschlossen. Weiter ist ein PWM-Port 
+        verfügt über zwei SPI\footnote{Serial Peripheral Interface, ein synchronen seriellen Datenbus }-Schnittstellen. An einer ist das besagte Stepperboard und 
+        an der anderen die beiden Brushless-Boards angeschlossen. Weiter wird ein PWM-Port 
         verwendet, um den Motor der Ballnachführung anzutreiben, siehe Kapitel 
         \ref{sec:Foerderband}.  
 
@@ -96,6 +96,6 @@
         realisiert ist. Das Freedom-Board wird über USB vom Akkumulator des Smartphone 
         gespeist. Sämtliche Datenblätter zu den verwendeten Motoren sind im Anhangsdokument 
         angefügt. Das zweite Netzteil wurde so umgebaut, dass es potentialfrei arbeitet. So 
-        ist es möglich, dass dies die $12\si{\volt}$ auf die Spannung des ersten Netzteils 
+        ist es möglich, dass es die $12\si{\volt}$ auf die Spannung des ersten Netzteils 
         generieren kann. Die Sicherung zwischen den beiden Netzteilen ist als Sicherheit 
         hinzugefügt für den Fall, dass es Probleme mit der Potentialfreiheit gibt.	
