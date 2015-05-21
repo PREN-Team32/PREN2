@@ -7,13 +7,24 @@
 
 \subsection{Übersicht}
 Der Aufbau der Ansteuerung der BLDC-Motoren ist als Blockschaltbild in Abbildung 
-\ref{abb:BlockschaltbildBLDC} ersichtlich.
+\ref{abb:BlockschaltbildBLDC} ersichtlich.\\
 \begin{figure}[h!]
    	\includegraphics[width=0.6\textwidth,clip,trim=0mm 0mm 0mm 0mm]
-   	{Enddokumentation/ET-Gruppe/Bilder/Blockschaltbild_BLDC.jpg}
+   	{\EtPath/Bilder/Blockschaltbild_BLDC.jpg}
    	\centering
    	\caption{Blockschaltbild des BLDC-Boards}
    	\label{abb:BlockschaltbildBLDC}
+\end{figure}\\
+In der Abbildung \ref{abb:BlockschaltbildBLDCPhoto} ist die Realisierung der Blöcke ersichtlich. 
+Dabei ist der erste Kasten der Anschluss des Motors, der zweite die H-Brücken, der dritte der 
+Treiber, der vierte die Signalrekonstruktion und der fünfte Teil ist der Controller, auf dem 
+die Firmware läuft.
+\begin{figure}[h!]
+   	\includegraphics[width=0.8\textwidth,clip,trim=0mm 0mm 0mm 0mm]
+   	{\EtPath/Bilder/BLDC-BoardBloecke.jpg}
+   	\centering
+   	\caption{Blockschaltbild des BLDC-Boards}
+   	\label{abb:BlockschaltbildBLDCPhoto}
 \end{figure}
 
 \ifSTANDALONE

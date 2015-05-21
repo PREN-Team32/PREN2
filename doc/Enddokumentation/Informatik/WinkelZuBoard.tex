@@ -8,22 +8,20 @@
 	\label{abb:UebersichtWinkelberechnung}
 \end{figure}
 
-Der Detektor erstellt ein Schwarz/Weiss Bild (hier ein SW Bildes??), welches den oberen Rand des Kübels zeigt. 
-Um das Gerät auf den Kübel auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) errechnet werden, 
+Der Detektor erstellt ein Schwarz/Weiss Bild (hier ein SW Bildes??), welches den oberen Rand des Korbs zeigt. 
+Um das Gerät auf den Korb auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) errechnet werden, 
 damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors umrechnen kann.
 \newline
 \newline
 Aus diesem Bild wird nun mittels Trigonometrie der Winkel berechnet. 
 Dazu wird zuerst die Länge Gegenkathete (siehe G in Abbildung \ref{abb:UebersichtWinkelberechnung}) 
 aus dem Schwarz/Weiss Bild errechnet. Mittels Schwerpunktbestimmung von weissen zu schwarzen Pixel auf dem Bild wird entschieden, 
-in welcher Spielhälfte sich der Kübel befindet. Ausgehend vom der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
-Kübels bestimmt werden. Diese Länge liegt zuerst als Anzahl Pixel vor, 
+in welcher Spielhälfte sich der Korb befindet. Ausgehend vom der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
+Korbs bestimmt werden. Diese Länge liegt zuerst als Anzahl Pixel vor, 
   kann anschliessend mit einem (variablen) Umrechnungsverhältnis Pixel zu Zentimeter in Zentimeter umgerechnet werden.
-Die Ankathete (siehe A in \ref{abb:UebersichtWinkelberechnung}) ist durch das Spielfeld auf die Länge von 170 cm fixiert. 
+Die Ankathete (siehe A in Abbildung \ref{abb:UebersichtWinkelberechnung}) ist durch das Spielfeld auf die Länge von 170 cm fixiert. 
 Mit diesen beiden Werten lässt sich nun mit dem Arkustangens der resultierende Winkel errechnen.
-\newline
-\newline
-// Hier Code Snippet als Bild vom AngleCalculator??
+
 \newline
 \newline
 Dieser Winkel kann mit dem Umrechnungsverhältnis (siehe Kapitel \ref{sec:Aufloesung}) von Microsteps zu Grad 
@@ -33,7 +31,7 @@ Schritte für den Schrittmotor ein  \enquote{r} für die Drehrichtung vorangeste
 (siehe Abbildung \ref{abb:UebersichtWinkelberechnung}).  
 \newline
 \newline
-Nähere Angaben zum Schrittmotor und dessen Ansteuerung sind im Anhang in der Dokumentation des Steppers der ET Gruppe verfügbar.
+Nähere Angaben zum Schrittmotor und dessen Ansteuerung sind im Anhang in der Dokumentation des Steppers der ET-Gruppe verfügbar.
 \newline
 \newline
 Sollte als Beispiel der errechnete Winkel $-7,8\si{\degree}$ sein, würde das Freedom-Board vom Android-Phone folgenden 
