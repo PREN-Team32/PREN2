@@ -3,7 +3,7 @@
 	eigens entwickelt und in Java implementiert. Auf die Verwendung eines 
 	Frameworks (wie beispielsweise OpenCV) wurde verzichtet. Grund dafür 
 	liegt in der statischen Problemstellung: Hintergrund, Korbform und -farbe 
-	sind immer gleich, was die Problemstellung stark vereinfacht und die Verwendung eines komplexeren Algorithmus hinfällig macht. Somit kann die Erkennungsmechanik einfach und statisch gehalten werden. Unterstützt wird diese Entscheidung auch durch den grösseren Lerneffekt, welche eine Eigenentwicklung mit sich bringt. \\
+	sind immer gleich, was die Problemstellung stark vereinfacht und die Verwendung eines komplexeren Algorithmus hinfällig macht. Somit kann die Erkennungsmechanik einfach und statisch gehalten werden. Unterstützt wird diese Entscheidung auch durch den grösseren Lerneffekt, welche eine Eigenproduktion mit sich bringt. \\
 	\\
 	Der Algorithmus 
 	basiert auf der Tatsache, dass der Korb deutlich dunkler als der 
@@ -11,10 +11,10 @@
 	müssen die Ränder abgeschnitten werden. Dies ist notwendig, da die Kamera einen 
 	grossen horizontalen Öffnungswinkel aufweist. Dementsprechend geht der 
 	Bildbereich links und rechts deutlich über das Spielfeld 
-	hinaus, was das Resultat verfälschen kann. Als zweiter Schritt wird 
-	durch sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die 
+	hinaus, was das Resultat verfälschen könnte. Als zweiter Schritt wird 
+	über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die 
 	Helligkeit anhand einer vordefinierten Schwelle bestimmt, ob es zum 
-	Hintergrund (hell) oder zum Korb (dunkel) gehört. Zur Bestimmung der Helligkeit eines Pixels anhand eines RGB Wertes gibt es mehrere Möglichkeiten, welche sich in Genauigkeit und Performance unterscheiden \cite{S:RGB}. Ein genügend hoher 
+	Hintergrund (heller) oder zum Korb (dunkel) gehört. Zur Bestimmung der Helligkeit eines Pixels anhand eines RGB Wertes gibt es mehrere Möglichkeiten, welche sich in Genauigkeit und Performance unterscheiden \cite{S:RGB}. Ein genügend hoher 
 	Kontrast ist an dieser Stelle entscheidend. Vor allem Schattenwürfe durch 
 	seitliche Beleuchtung stellen ein Problem dar. Deshalb wurde bereits in PREN 1 diesbezüglich 
 	ein erster Test des entwickelten Prototypen mit zwei Scheinwerfern 
@@ -27,4 +27,4 @@
 	welche wiederum eine Menge schwarzer Pixel folgen muss. Da dieser Prozess 
 	immer in derselben horizontalen Ebene stattfindet kann durch eine 
 	abschliessende Berechnung der Mittelpunkt des Korbes und der damit 
-	verbundene Winkel des Ballwerfers zum Korb, trigonometrisch bestimmt werden.
+	verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.
