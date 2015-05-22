@@ -1,0 +1,57 @@
+\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
+%                                            % Schriftgrösse = 10Punkte;
+%                                            % Mathe.-Gl. Modus = linksbündig
+%                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
+%
+\usepackage{../common/layout}
+\setcounter{tocdepth}{4}   %= Aufnahme in das Inhaltsverzeichnis *
+\setcounter{secnumdepth}{4}  % = Nummerierung vertiefen *
+
+\input{Enddokumentation/ET-Gruppe/variables}
+\newcommand{\EtPath}{Enddokumentation/ET-Gruppe}
+
+\newcommand{\myTitel}{Realisierung eines\\
+autonomen Ballwerfers}
+\newcommand{\myDokumentTyp}{Anhangsdokument}
+\setboolean{STANDALONE}{false}
+\setboolean{EMBED}{true}
+\setlength{\parindent}{0em} 
+\begin{document}
+    %
+    % Deck- und Titelblatt
+    %
+    \input{../common/Deckblatt}
+    \input{../common/Titelblatt}
+    %
+    % Inhaltsverzeichnis umbenennen und anschliessend einen Seitenumbruch
+    %
+    \renewcommand{\contentsname}{Inhalt}
+    \tableofcontents
+    \newpage 
+    %
+    % Start mit der eigentlicher Arbeit
+    %    
+   
+	\includepdf[page=1 , offset=0cm -1.9cm, width=1.05\textwidth,picturecommand={\centering},pagecommand=\section{Aufgabenstellung PREN 2}{\thispagestyle{fancy}},]{Anhangsdokument/Aufgabenstellung_PREN2_F15.pdf}
+	
+	\includepdf[page=2- , offset=0cm -1.60cm, width=1.1\textwidth,picturecommand={\centering},pagecommand={\thispagestyle{fancy}},]{Anhangsdokument/Aufgabenstellung_PREN2_F15.pdf}
+	
+	\includepdf[page=1 , offset=0cm -1.9cm, width=1.05\textwidth,picturecommand={\centering},pagecommand=\section{Aufgabenstellung PREN 1}{\thispagestyle{fancy}},]{Anhangsdokument/Aufgabenstellung_PREN1_H14.pdf}
+		
+	\includepdf[page=2- , offset=0cm -1.60cm, width=1.1\textwidth,picturecommand={\centering},pagecommand={\thispagestyle{fancy}},]{Anhangsdokument/Aufgabenstellung_PREN1_H14.pdf}
+	
+	\begin{landscape}
+		\section{Risikokatalog}
+		\includegraphics[page=1,scale=0.73,clip,trim=17mm 27mm 31mm 39mm]{Anhangsdokument/Risikomanagement.pdf}
+		\newpage  			
+		\includegraphics[page=2,scale=1,clip,trim=20mm 22mm 21mm 32mm]{Anhangsdokument/Risikomanagement.pdf}
+		\newpage  			
+		\includegraphics[page=3,scale=1,clip,trim=20mm 22mm 21mm 22mm]{Anhangsdokument/Risikomanagement.pdf}
+		\newpage  			
+		\includegraphics[page=4,scale=1,clip,trim=20mm 22mm 21mm 22mm]{Anhangsdokument/Risikomanagement.pdf}
+		\newpage  			
+		\includegraphics[page=5,scale=1,clip,trim=20mm 22mm 21mm 22mm]{Anhangsdokument/Risikomanagement.pdf}	
+		\newpage  			
+		\includegraphics[page=6,scale=1,clip,trim=20mm 22mm 21mm 22mm]{Anhangsdokument/Risikomanagement.pdf}	
+	\end{landscape}  
+\end{document}
