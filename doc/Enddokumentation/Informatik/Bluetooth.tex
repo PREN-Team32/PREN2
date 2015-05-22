@@ -1,18 +1,17 @@
 \subsection{Bluetooth}
-Via Bluetooth konnten die serialisierten Objekte zwischen Android-App 
-und Desktop-App gesendet und empfangen werden. 
-Da Java keine native Bluetooth Kommunikation ermöglicht, wurde auf der 
+Via Bluetooth konnten die serialisierten Objekte zwischen Smartphone-App 
+und DesktopViewer ausgetauscht werden. 
+Da Java keine native Bluetooth-Kommunikation ermöglicht, wurde auf der 
 Desktop Seite auf die BlueCove Library zugegriffen. Da der letzte Release der 
-BlueCove Library nicht mehr mit 64-Bit Betriebssystemen funktionierte, wurde ein Snapshot 
-verwendet, welcher auch auf 64-Bit Betriebssystemen funktioniert. Allerdings ist dieser Snapshot 
-kein \enquote{offizieller} Release. \newline
-Google stellt bei der Programmierung eine native Bluetooth 
+BlueCove Library nicht mehr mit 64-Bit Betriebssystemen funktionierte, wurde ein spezieller Snapshot 
+verwendet, welcher auch auf 64-Bit Betriebssystemen lauffähig ist. Allerdings ist dieser Snapshot 
+kein offizieller Release. \newline
+Android stellt bei der Programmierung eine native Bluetooth 
 Library zur Verfügung, weshalb auf der Samrtphone Seite jene direkt verwendet wurde. 
 Bei der Implementation kamen einige Probleme auf, was mit der eher dürftigen 
 Dokumentation der BlueCove Library, sowie keinerlei vorgängigen Erfahrung in diesem Teilbereich 
 erklärt werden konnte. Schlussendlich konnten die serialisierten Objekte, das ConfigItem 
-und das ValueItem, gesendet beziehungsweise empfangen werden.
-Allerdings konnte jeweils nur ein Objekt pro aufgebauter 
+und das ValueItem, zwar gesendet und empfangen werden, allerdings konnte jeweils nur ein Objekt pro aufgebauter 
 Bluetooth Verbindung gesendet werden. Falls ein zweites Mal versucht wurde ein ValueItem von der 
 Android-App zur Desktop-App zu schicken, wurde das Objekt nicht erkannt, da der 
 Stream noch die Informationen des vorher gesendeten ValueItems enthielt. 
