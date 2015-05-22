@@ -1,15 +1,17 @@
 \section{Beschleunigungsräder}
-    Die Vortriebskraft für die Tennisbälle wird durch zwei Beschleunigungsräder ermöglicht. Der 
+    Die Vortriebskraft für die Tennisbälle wird durch zwei Beschleunigungsräder ermöglicht. Der verwendete
     Beschleunigungsradantrieb wurde aus mehreren Gründen gewählt. Über die Drehzahl oder über den 
     Anpressdruck der Räder kann die Wurfweite stufenlos eingestellt werden. Somit ist die Maschine 
     für jeden Tennisball in einem bestimmten Bereich gewappnet. Die Beschleunigungsräder wurden 
     aus PVC hergestellt, da dieser Werkstoff einfach zu bearbeiten ist und zugleich eine genügend 
     grosse Festigkeit bietet. Um möglichst viel Gewicht zu sparen, wurde an beiden Planflächen so 
-    viel Material wie möglich herausgenommen. Für die Übertragung des Momentes auf die Welle wurde 
+    viel Material wie möglich herausgenommen, siehe Abbildung \ref{abb:BeschleunigungsmasseHaft}. 
+    Für die Übertragung des Momentes auf die Welle wurde 
     ein Presssitz realisiert. Dies ermöglicht eine gleichmässige Flächenpressung und erhöht die 
-    Rundlaufgenauigkeit hingegen wenn man es geklebt hätte. Weiter ist durch die konkave Form der 
+    Rundlaufgenauigkeit gegenüber einer geklebten Welle-Nabe-Verbindung. Weiter ist durch die konkave Form der 
     Beschleunigungsräder die Richtung der Ballflugbahn vorgegeben. Hier wird keine zusätzliche Ballführung 
-    gebraucht was Gewicht, Kosten und Platz spart. Die Räder sind konkav ausgearbeitet, so dass die Beschleunigung nicht nur über einen Punkt übertragen wird. So wird gewährleistet, dass die Kraft 
+    gebraucht was Gewicht, Kosten und Platz spart. Die Räder sind konkav ausgearbeitet, so dass die 
+    Beschleunigung nicht nur über einen Punkt übertragen wird. So wird gewährleistet, dass die Kraft 
     über eine grössere Fläche übertragen werden kann. Dadurch entsteht der Vorteil, dass die 
     Beschleunigung geführt abläuft, wodurch ein gerichteter Wurf entsteht. So kann die vorhandene 
     Rotationsenergie vollumfänglich den Tennisbällen übergeben werden. Die Ausrundung wird durch 
@@ -17,55 +19,51 @@
     mit der vorhandenen Masse ein genügendes Trägheitsmoment zur Verfügung steht. Dies ist nötig, 
     damit bei der Beschleunigung der Tennisbälle die Räder nicht zu stark abgebremst werden. Durch 
     den Durchmesser wird auch die Winkelgeschwindigkeit festgelegt. Zudem sind die Räder mit einer 
-    speziellen Haftmatte, siehe Abbildung \ref{abb:BeschleunigungsmasseHaft} beschichtet, damit die 
+    speziellen Haftmatte beschichtet, damit die 
     Kraft optimal auf den Ball übertragen werden kann. Somit wird ein höherer Haftreibungskoeffizient 
-    erreicht, der ein Durchrutschen der Bälle verhindert. Die Achsen der zwei Beschleunigungsräder sind im 
+    erreicht und Schlupf zwischen Bällen und Beschleunigungsräder verhindert. Die Achsen der zwei Beschleunigungsräder sind im 
     Winkel von 45\si{\degree} zur Bodenplatte angeordnet. Der Abschusswinkel ist so gewählt, dass 
-    die Tennisbälle in einem genug grossen Einschlagwinkel im Zielbereich landen und keine Möglichkeit 
-    besteht mit dem Korbrand zu 
-    kollidieren. 
+    die Tennisbälle mit einem genügend grossen Einschlagwinkel im Zielbereich landen. So wird die Möglichkeit einer Kollision mit dem Korbrand verhindert.
     \begin{figure}[h!]
-       	\includegraphics[width=0.6\textwidth,clip,trim=0mm 5mm 0mm 5mm]
+       	\includegraphics[width=0.6\textwidth,clip,trim=20mm 5mm 0mm 5mm]
        	{Enddokumentation/Bilder/Beschleunigungsrad.JPG}
        	\centering
-       	\caption{Beschleunigungsmasse mit Haftmatte}
+       	\caption{Beschleunigungsrad mit Haftmatte}
        	\label{abb:BeschleunigungsmasseHaft}
     \end{figure}
-    %
+    %    
     \subsection{Antriebsstrang}
-        \begin{figure}[h!]
-           	\includegraphics[width=0.9\textwidth,clip,trim=0mm 15mm 0mm 0mm]
-           	{Enddokumentation/Bilder/Antriebsstrang.JPG}
-           	\centering
-           	\caption{Der Antriebsstrang}
-           	\label{abb:Antriebsstrang}
-        \end{figure}
         Für die Übertragung der Momente der Brushlessmotoren auf die Beschleunigungsräder wurde eine 
-        Zahnradübersetzung von $1:4$ gewählt, wie im PREN1 bestimmt. Das ergibt ein maximales 
-        Drehmoment von 0.514\si{\newton\meter} siehe Tabelle \ref{tab:AntriebsstrangKraft}.
+        Zahnradübersetzung von $1:4$ gewählt.
+		\begin{figure}[h!]
+			\includegraphics[width=0.9\textwidth,clip,trim=0mm 15mm 0mm 0mm]
+			{Enddokumentation/Bilder/Antriebsstrang.JPG}
+			\centering
+			\caption{Der Antriebsstrang}
+			\label{abb:Antriebsstrang}
+		\end{figure}
         \begin{table}[h!]
             \centering
-            \begin{zebratabular}{p{0.10\textwidth}p{0.4\textwidth}p{0.3\textwidth}}
-                \rowcolor{gray} Anzahl & Beschreibung & vorh. / zul. Momente (Nutzen) \\
-                2x & Brushlessmotor & 0.1256 \si{\newton\meter}\\
-                2x & Zahnrad Modul 1.0 Z15 & 0.1256 \si{\newton\meter} / 0.15 \si{\newton\meter}\\
-                2x & Zahnrad Modul 1.0 Z30 & 0.275 \si{\newton\meter} / 0.68 \si{\newton\meter}\\
-                2x & Zahnrad Modul 1.25 Z15 & 0.275 \si{\newton\meter} / 0.27 \si{\newton\meter}\\
-                2x & Zahnrad Modul 1.25 Z30 & 0.514 \si{\newton\meter} / 1.24 \si{\newton\meter}\\
-                   & \textbf{Max. Drehmoment}& \textbf{0.514 \si{\newton\meter}}\\
+            \begin{zebratabular}{p{0.10\textwidth}p{0.25\textwidth}}
+                \rowcolor{gray} Anzahl & Beschreibung\\
+                \rule{0pt}{11pt}2x & Brushlessmotor \\
+                \rule{0pt}{11pt}2x & Zahnrad Modul 1.0 Z15\\
+                \rule{0pt}{11pt}2x & Zahnrad Modul 1.0 Z30\\
+                \rule{0pt}{11pt}2x & Zahnrad Modul 1.25 Z15\\
+                \rule{0pt}{11pt}2x & Zahnrad Modul 1.25 Z30\\
             \end{zebratabular}
-            \caption{Newtonmeter Übersicht}
+            \caption{Zahnräder der Übersetzung}
             \label{tab:AntriebsstrangKraft}
         \end{table}
         Auf die Welle des Brushlessmotores wurde eine Büchse eingepresst, da die Standardbohrung des 
         Zahnrades grösser war als der Wellendurchmesser. Das Zahnrad selber wurde ebenfalls auf die 
         Büchse aufgepresst und noch zusätzlich mit einer Stellschraube fixiert. Das grosse Zahnrad, 
-        das auf die Welle der Beschleunigungsräder kommt, wurde ebenfalls nach dem gleichen Schema 
+        der Welle der Beschleunigungsräder, wurde ebenfalls nach dem gleichen Schema 
         montiert. Auch hier kam eine Einpressbüchse zum Einsatz und das Zahnrad wurde wiederum mit 
         einer Stellschraube fixiert. Für das Zahnradpaar in der Mitte der Übertragung brauchte es eine 
-        zusätzliche Achse. Diese wurde mit zwei Schrauben festgemacht, eine an der Seitenwand des 
-        Acrylglases und die andere an der Motorbefestigungsplatte. Die Achse ist fest und dient als 
-        Gleitlager. Für die Übertragung der beiden Zahnräder auf dem Gleitlager wurden 4 kleine Stangen 
+        zusätzliche Achse. Diese wurde mit zwei Schrauben an der Seitenwand des 
+        Acrylglases und an der Motorbefestigungsplatte festgemacht. Die Achse ist fest und dient als 
+        Gleitlager. Für die Übertragung der beiden Zahnräder auf dem Gleitlager wurden vier kleine Stangen 
         aus Aluminium verwendet. Das Gleitlager besteht ebenfalls aus Aluminium. Die Welle der 
         Beschleunigungsräder ist als Fest- und Loslager ausgeführt. Das Festlager befindet sich auf 
         der Seite des Zahnrades und ist gegen axiales Verschieben mit einem Sicherungsring versehen. 
@@ -77,6 +75,6 @@
 %
 %Ab hier ist es die ET-Doku. Die Files sind Kopien, der Master liegt im ET-Repo
 \subsection{Ansteuerung}
-Die folgenden Unterkapitel sind wie im PREN1 in Zusammenarbeit mit der ET-Gruppe erstellt worden.
+Die folgenden Unterkapitel \ref{sec:ET_Hardware} und \ref{sec:ET_Firmware} sind wie im PREN1 in Zusammenarbeit mit der ET-Gruppe erstellt worden.
 \input{Enddokumentation/ET-Gruppe/hardware}
 \input{Enddokumentation/ET-Gruppe/firmware}
