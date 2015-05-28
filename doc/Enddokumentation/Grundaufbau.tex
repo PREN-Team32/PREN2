@@ -1,11 +1,21 @@
 \section{Grundaufbau}
+	Im kommenden Kapitel wird der Grundaufbau des kompletten Ballwerfers ausführlich erläutert. 
+	Dazu gehörten die mechanischen, elektronischen und software Lösungen. 
     Der Ballwerfer ist so konzipiert, das er aus einem fix stehenden Basismodul besteht, 
     welches in der Mitte des Startbereiches positioniert wird. Die Abwurfeinheit, welche 
     den Ballwurfmechanismus und die Ballzuführung beinhaltet, ist auf dem Basismodul 
     drehend gelagert. Weiter ist auch das Smartphone für die Korberkennung und alle 
     Steuereinheiten auf dem Basismodul angebracht. Das Startsignal wird mittels WLAN 
-    von einem externen Notebook übertragen.\\
-    \\
+    von einem externen Notebook übertragen. Im folgenden Bild sieht man die komplette Ballmaschine mit den Hauptkomponenten, Förderband
+    Ausrichteinheit mit Brushlessmotor, Beschleunigungsräder und den Netzteilen. \ref{abb:Ballmaschine} \\
+    \begin{figure}[h!]
+    	\includegraphics[width=.93\textwidth,clip,trim=0mm 0mm 0mm 0mm]
+    	{Enddokumentation/Bilder/Geraeteuebersicht_2.jpg}
+    	\centering
+    	\caption{Aufsicht auf die rechte Seite}
+    	\label{abb:Ballmaschine}
+    \end{figure}
+    
     Der ganze Aufbau des Ballwurfmechanismus ist sehr simple gehalten. Er besteht 
     hauptsächlich aus zwei $5\si{\milli\meter}$ dicken Acrylglasplatten, in welcher alle mechanischen 
     Vorrichtungen gelagert sind. Durch diesen Aufbau können Änderungen schnell und 
@@ -22,27 +32,24 @@
     einem Förderband. Das Förderband transportiert die Bälle mit einer 
     konstanter Geschwindigkeit zu den Beschleunigungsräder, damit alle Tennisbälle die 
     gleiche Startenergie aufweisen. Dadurch ist eine gleichmässige Wurfweite und eine 
-    hohe Reproduzierbarkeit gewährleistet.
+    hohe Reproduzierbarkeit gewährleistet. \\
+    Die zwei nachkommenden Bilder zeigen einer Übersicht der verschiedenen weiteren Komponenten, welche im Verlauf der Dokumentation explizit erklärt werden. 
+    \ref{abb:Aufsicht auf die linke Seite} und \ref{abb:Frontale Aufsicht} 
+	
 	\begin{figure}[h!]
 	   	\includegraphics[width=.93\textwidth,clip,trim=0mm 0mm 0mm 0mm]
 	   	{Enddokumentation/Bilder/Geraeteuebersicht_1.jpg}
 	   	\centering
 	   	\caption{Aufsicht auf die linke Seite}
-	   	\label{abb:}
+	   	\label{abb:Aufsicht auf die linke Seite}
 	\end{figure}
-	\begin{figure}[h!]
-	   	\includegraphics[width=.93\textwidth,clip,trim=0mm 0mm 0mm 0mm]
-	   	{Enddokumentation/Bilder/Geraeteuebersicht_2.jpg}
-	   	\centering
-	   	\caption{Aufsicht auf die rechte Seite}
-	   	\label{abb:}
-	\end{figure}
+	
 	\begin{figure}[h!]
 	   	\includegraphics[width=0.58\textwidth,clip,trim=0mm 0mm 0mm 0mm]
 	   	{Enddokumentation/Bilder/Geraeteuebersicht_3.jpg}
 	   	\centering
 	   	\caption{Frontale Aufsicht}
-	   	\label{abb:}
+	   	\label{abb:Frontale Aufsicht}
 	\end{figure}
     
     
@@ -51,7 +58,7 @@
 		Für die Seitenwände, die Zahnscheibe und für die Verbindungsstege wurde eine 
 		$5\si{\milli\meter}$ Dicke Acrylglas (PMMA) Platte verwendet. Die Konturen 
 		wurden mit dem Laser an der HSLU gefertigt. Damit der Laser die Daten lesen 
-		konnte, wurde aus dem CAD eine dxf-Datei erstellt. Um die Nachbearbeitung 
+		konnte, wurde aus der CAD-Datei des Seitenprofiles eine dxf-Datei erstellt. Um die Nachbearbeitung 
 		möglichst gering zu halten, wurden auch die Lager- und Durchgangsbohrungen 
 		für die Schrauben direkt auf das Fertigmass gelasert. Die Lager passten dabei 
 		sehr genau in die Bohrungen, sodass sie ein wenig klemmten und trotzdem keine 
@@ -86,8 +93,10 @@
 			\end{minipage}
 		\end{figure}
 		
+		Neben den mechanischen Hauptkomponenten gibt es auch in der Elektronik sogenannte Grundelemente. 
 		
     \subsection{Hauptcontroller}
+    	
         Die gesamte Hardware wird über das Freedom-Board\footnote{Development-Board vom 
         Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat einen internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
         \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
@@ -111,7 +120,7 @@
         \end{wrapfigure}
         Gemäss Datenblatt sind die verwendeten Brushless-Motoren mit einer Versorgungsspannung 
         von $12\si{\volt}$ bei einem maximalen Strom von $11\si{\ampere}$ spezifiziert. 
-        Der Steppermotor und der DC-Motor sind gemäss Datenblatt für eine Betriebsspannung 
+        Der Steppermotor und der DC-Motor sind gemäss Datenblatt für das Betriebsspannung FreeRTOS 
         von $24\si{\volt}$ ausgelegt. Die Spannungsversorgung wird mit zwei Server-Netzteile 
         realisiert, die je $12\si{\volt}$ mit maximal $60\si{\ampere}$ liefern. Aus 
         Sicherheitsgründen wird für jeden Motor eine separate Sicherung verwendet. Das Schema 
