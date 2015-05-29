@@ -1,13 +1,13 @@
 \section{Grundaufbau}
 	Im kommenden Kapitel wird der Grundaufbau des kompletten Ballwerfers ausführlich erläutert. 
-	Dazu gehörten die mechanischen, elektronischen und software Lösungen. 
+	In diesem Sinne wird auf sämtliche Hard- und Software-Komponenten eingegangen.
     Der Ballwerfer ist so konzipiert, das er aus einem fix stehenden Basismodul besteht, 
     welches in der Mitte des Startbereiches positioniert wird. Die Abwurfeinheit, welche 
     den Ballwurfmechanismus und die Ballzuführung beinhaltet, ist auf dem Basismodul 
     drehend gelagert. Weiter ist auch das Smartphone für die Korberkennung und alle 
     Steuereinheiten auf dem Basismodul angebracht. Das Startsignal wird mittels WLAN 
     von einem externen Notebook übertragen. Im folgenden Bild sieht man die komplette Ballmaschine mit den Hauptkomponenten, Förderband
-    Ausrichteinheit mit Brushlessmotor, Beschleunigungsräder und den Netzteilen. \ref{abb:Ballmaschine} \\
+    Ausrichteinheit mit Brushlessmotor, Beschleunigungsräder und den Netzteilen, siehe Abbildung \ref{abb:Ballmaschine}.
     \begin{figure}[h!]
     	\includegraphics[width=.93\textwidth,clip,trim=0mm 0mm 0mm 0mm]
     	{Enddokumentation/Bilder/Geraeteuebersicht_2.jpg}
@@ -16,25 +16,23 @@
     	\label{abb:Ballmaschine}
     \end{figure}
     
-    Der ganze Aufbau des Ballwurfmechanismus ist sehr simple gehalten. Er besteht 
+    Der ganze Aufbau des Ballwurfmechanismus ist möglichst simpel gehalten. Er besteht 
     hauptsächlich aus zwei $5\si{\milli\meter}$ dicken Acrylglasplatten, in welcher alle mechanischen 
     Vorrichtungen gelagert sind. Durch diesen Aufbau können Änderungen schnell und 
     einfach angepasst werden. Die Ausrichtung des Abwurfmechanismus erfolgt durch 
-    einen sehr flachen Steppermotor, welcher in der drehenden Abwurfeinheit angebracht 
+    einen flachen Steppermotor, welcher in der drehenden Abwurfeinheit angebracht 
     ist. Dadurch wird die Bauhöhe des Ballwerfers tief gehalten, was einen grossen 
-    Stabilitätsvorteil bietet. Die Drehachse der Abwurfeinheit ist an der Spitze des 
+    Vorteil in Sachen Stabilität bietet. Die Drehachse der Abwurfeinheit ist an der Spitze des 
     Ballwerfers mit einem Bolzen angebracht. Somit bleibt die Abwurfposition der 
-    Tennisbälle konstant am gleichen Ort. Die Tennisbälle werden durch zwei 
-    Beschleunigungsräder beschleunigt. Die Beschleunigungsräder werden je einzeln 
+    Tennisbälle konstant am gleichen Ort. Die Bälle werden durch zwei 
+    Beschleunigungsräder beschleunigt, welche jeweils einzeln 
     über eine Übersetzung mit einem Brushlessmotor auf Touren gebracht. Die Beschleunigungsräder 
-    drehen gegenläufig und die Tennisbälle werden dazwischen hindurchgeführt und 
-    abgeworfen. Die Zuführung der Tennisbälle zu den Beschleunigungsräder erfolgt mit 
+    drehen gegenläufig, wobei die Tennisbälle zum Abwurf dazwischen hindurchgeführt werden. Die Zuführung zu den Beschleunigungsräder erfolgt mit 
     einem Förderband. Das Förderband transportiert die Bälle mit einer 
     konstanter Geschwindigkeit zu den Beschleunigungsräder, damit alle Tennisbälle die 
     gleiche Startenergie aufweisen. Dadurch ist eine gleichmässige Wurfweite und eine 
     hohe Reproduzierbarkeit gewährleistet. \\
-    Die zwei nachkommenden Bilder zeigen einer Übersicht der verschiedenen weiteren Komponenten, welche im Verlauf der Dokumentation explizit erklärt werden. 
-    \ref{abb:Aufsicht auf die linke Seite} und \ref{abb:Frontale Aufsicht} 
+    Die zwei nachkommenden Bilder zeigen einer Übersicht der verschiedenen weiteren Komponenten, welche im Verlauf der Dokumentation explizit erklärt werden, siehe Abbildungen \ref{abb:Aufsicht auf die linke Seite} und \ref{abb:Frontale Aufsicht}.
 	
 	\begin{figure}[h!]
 	   	\includegraphics[width=.93\textwidth,clip,trim=0mm 0mm 0mm 0mm]
@@ -64,12 +62,12 @@
 		sehr genau in die Bohrungen, sodass sie ein wenig klemmten und trotzdem keine 
 		starken Spannungen erzeugten, die allenfalls zu Rissen führen könnten. Dies 
 		wurde im Vorfeld getestet (siehe Doku PREN 1). Die einzigen Nachbearbeitungen 
-		waren die seitlichen Bohrungen an den Seitenwänden und an den Spannelementen. 
+		waren die Bohrungen an den Seitenwänden und an den Spannelementen. 
 		Dabei musste auf eine gute Kühlung geachtet werden, da die Restwandstärke nur 
-		noch je $1\si{\milli\meter}$ beträgt und das Acrylglas sehr schnell weich wird. 
+		noch je $1\si{\milli\meter}$ beträgt und das Acrylglas schnell weich wird. 
 		Ebenfalls musste die Schnittgeschwindigkeit für das Bohren drastisch gesenkt 
-		werden gegenüber einem normalen Kunststoff wie PE. Die seitlichen Bohrungen an 
-		den Seitenwänden wurden auf einer Universalfräsmaschine gefertigt, die über eine 
+		werden gegenüber einem normalen Kunststoff wie PE. Die Bohrungen an 
+		den Seitenwänden wurden auf einer Universalfräsmaschine durchgeführt, die über eine 
 		horizontale Frässpindel verfügt (siehe Abbildungen \ref{fig:Acrylglas_1} und 
 		\ref{fig:Acrylglas_2}). Die Bohrungen für die 
 		Elekronikprints und andere kleine Anpassungen wurden ebenfalls erst nach dem 
@@ -100,7 +98,7 @@
         Die gesamte Hardware wird über das Freedom-Board\footnote{Development-Board vom 
         Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat einen internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
         \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
-        das Smarphone mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
+        das Smartphone mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
         Betriebssystem, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
         und die angekommenen Befehle ausführt. Ein wichtiger, nur einmal gebrauchter Task, 
         ist die Initialisierung des Stepperboards, siehe Anhang Kapitel \ref{sec:StepperAnsteuerung}. Der Controller 
@@ -121,11 +119,11 @@
         Gemäss Datenblatt sind die verwendeten Brushless-Motoren mit einer Versorgungsspannung 
         von $12\si{\volt}$ bei einem maximalen Strom von $11\si{\ampere}$ spezifiziert. 
         Der Steppermotor und der DC-Motor sind gemäss Datenblatt für das Betriebsspannung FreeRTOS 
-        von $24\si{\volt}$ ausgelegt. Die Spannungsversorgung wird mit zwei Server-Netzteile 
+        von $24\si{\volt}$ ausgelegt. Die Spannungsversorgung wird mit zwei Server-Netzteilen 
         realisiert, die je $12\si{\volt}$ mit maximal $60\si{\ampere}$ liefern. Aus 
         Sicherheitsgründen wird für jeden Motor eine separate Sicherung verwendet. Das Schema 
         in Abbildung \ref{abb:Spannungsversorgung} zeigt, wie die Spannungsversorgung 
-        realisiert ist. Das Freedom-Board wird über USB vom Akkumulator des Smartphone 
+        umgesetzt ist. Das Freedom-Board wird über USB vom Akkumulator des Smartphone 
         gespeist. Sämtliche Datenblätter zu den verwendeten Motoren sind im Anhangsdokument 
         angefügt. Das zweite Netzteil wurde so umgebaut, dass es potentialfrei arbeitet. So 
         ist es möglich, dass es die $12\si{\volt}$ auf die Spannung des ersten Netzteils 
@@ -133,6 +131,6 @@
         hinzugefügt für den Fall, dass es Probleme mit der Potentialfreiheit gibt.	
         
         \subsection{Smartphone auf dem Ballwerfer}
-        Das eingesetzte Smartphone ist ein Samsung Galaxy Nexus I9250. Das Smartphone führt diverse Aufgaben aus. Dazu zählt 
+        Das eingesetzte Smartphone ist ein Samsung Galaxy Nexus I9250. Es führt diverse Aufgaben aus. Dazu zählt 
         die Bildaufnahme, die Auswertung des Bildes, die Berechnung des Winkels, die Kommunikation 
-        mit dem Desktop-Computer (Startgerät) und die Kommunikation mit dem Freedom-Board.
+        mit dem Desktop-Computer (Startgerät) und mit dem Freedom-Board.
