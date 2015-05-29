@@ -42,8 +42,8 @@ Der Motor wird mit drei Halbbrücken kommutiert. Für die Ansteuerung der MOSFET
 wird ein Predriver DRV8301 von Texas Instruments eingesetzt. Die Halbbrücken 
 werden einzeln vom Controller geschalten. Damit nur ein 
 PWM-Signal erzeugt 
-werden muss, werden die Ansteuerleitungen mittels Widerständen mit dem 
-PWM-Signal verbunden. Werden die Ansteuerungen vom Controller nicht aktiv 
+werden muss, sind die Ansteuerleitungen mittels Widerständen mit dem 
+PWM-Signal verbunden. Sind die Ansteuerungen vom Controller nicht aktiv 
 getrieben, liegt die PWM an. Die Konfiguration der Predrivers erfolgt über SPI. 
 
 \ifSTANDALONE
@@ -56,7 +56,10 @@ Die Phasendetektion besteht aus Sternpunktnachbildung, Komparator und
 Synchronisation. Die Sternpunktnachbildung erzeugt einen virtuellen Sternpunkt 
 mit Hilfe eines Widerstandsnetzwerkes und eines Tiefpassfilters. Die einzelnen 
 Phasenspannungen werden mit diesem virtuellen Sternpunkt verglichen. Mit einem 
-Flipflop wird das Signal mit der PWM Synchronisiert. 
+Flipflop wird das Signal mit der PWM Synchronisiert.
+\ifEMBED 
+Das Konzept wurde im PREN1 \cite{Team32:Doku} ausführlich beschrieben.
+\fi
 
 \ifSTANDALONE
 \subsection{Controller}
