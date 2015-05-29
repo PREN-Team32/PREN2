@@ -1,6 +1,8 @@
 \subsection{Vom Winkel zum Board}
 \label{sec:WinkelzuBoard}
-
+Wie in Abbildung \ref{abb:editedPicture} ersichtlich ist, generiert der Detektor ein Schwarz/Weiss Bild, welches den oberen Rand des Korbs zeigt. 
+Um das Gerät auf den Korb auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) berechnet werden, 
+damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors umrechnen kann.\\
 \begin{figure}[h!]
 	\includegraphics[width=0.5\textwidth,clip,trim=20mm 120mm 100mm 40mm]  % trim=l b r t
 	{Enddokumentation/Bilder/UebersichtWinkelberechnung.pdf}
@@ -9,11 +11,6 @@
 	\label{abb:UebersichtWinkelberechnung}
 \end{figure}
 
-Wie in Abbildung \ref{abb:editedPicture} ersichtlich ist, generiert der Detektor ein Schwarz/Weiss Bild, welches den oberen Rand des Korbs zeigt. 
-Um das Gerät auf den Korb auszurichten, muss der Winkel (siehe a in Abbildung \ref{abb:UebersichtWinkelberechnung}) berechnet werden, 
-damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors umrechnen kann.
-\newline
-\newline
 Aus diesem Bild wird nun mittels Trigonometrie der Winkel berechnet. 
 Dazu wird zuerst die Länge Gegenkathete (siehe G in Abbildung \ref{abb:UebersichtWinkelberechnung}) 
 aus dem Schwarz/Weiss Bild berechnet. Ausgehend vom der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
