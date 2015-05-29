@@ -39,7 +39,12 @@ Der Code aus dem  Prototyp-App wird nun gewissermassen als Komponente zur Kommun
 im Android-App verwendet. 
 \newline
 \newline
-Die Logik und Auslösung der Befehle an die Motoren findet vom Android-App via Freedom-Board statt. Damit 
-sind das Starten der Brushless-DC-Motoren, das Ausrichten des Geräts mit dem Schrittmotor und das Starten 
+Die Logik und Auslösung der Befehle an die Motoren findet vom Android-App via Freedom-Board statt. 
+Damit sind das Starten der Brushless-DC-Motoren, das Ausrichten des Geräts mit dem Schrittmotor und das Starten 
 des Motors für das Förderband gemeint. Nach dem Ausführen ihrer Aufgabe müssen die betreffeden Motoren 
-ausgeschaltet werden, das wiederum vom Android-Phone aus passiert.
+ausgeschaltet werden, das wiederum vom Android-Phone aus passiert.\newline
+Es wird ein fixes Protokoll und persistente asynchrone Kommunikation verwendet.
+Die Verbindung ist unidirektional vom Android-Phone zum Freedom-Board. 
+Als Befehle werden Strings im ASCII-Format an das Freedom-Board gesendet. Bespiele von Befehlen sind im Kapitel
+\ref{sec:WinkelzuBoard} zu finden.
+
