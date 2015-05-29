@@ -1,61 +1,79 @@
 \subsection{Soll-/ Ist-Zeitvergleich}
 \label{sec:SollIstVergleich}
-\begin{zebratabular}{p{0.52\textwidth}p{0.1\textwidth}p{0.1\textwidth}p{0.15\textwidth}}
-\rowcolor{gray}\multicolumn{4}{l}{\textbf{Allgemeine Projektarbeiten}}\\
-\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
-Input              & 28  & 28   & -\\
-Planungssitzungen  & 49  & 39.5 & -9.5\\
-Dokumentation      & 200 &      & \\
-Risikomanagement   & 10  & 5    & -5\\
-Projektplanung     & 50  & 45   & -5\\
-Plakat/Auftritt    & 10  &      & \\
-Präsentation       & 30  &      & \\
-\textbf{Gesamt}    & \textbf{377} &      & \\
-                   &     &    & \\
-\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Maschinentechnik}}\\
-\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
-Komponenten Tests  & 25  & 35 & +10\\
-Produktion         & 80  & 90 & +10\\
-Montage            & 40  & 40 & -\\
-Pläne/Zeichnungen  & 5   & 20 & +15\\
-\textbf{Gesamt}    & \textbf{150} & \textbf{185} & \textbf{+35}\\
-                   &     &    & \\
-\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Elektrotechnik}}\\
-\textbf{Aktivität}  & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
-Schema              & 30 & 40  & +10\\
-Print Prototyp      & 60 & 60  & -\\
-Print definitiv     & 15 & 15  & -\\
-Firmware            & 40 & 45  & +5\\
-Stepper Board       & 12 & 8   & -4\\
-DC Motor            & 3  & 8   & +5\\
-Inbetriebnahme BLDC & 50 & 30  & -20\\
-Inbetriebnahme      & 15 & 30  & +15\\
-\textbf{Gesamt} & \textbf{225} & \textbf{236} & +\textbf{11}\\
-                   &     &    & \\
-\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Informatik}}\\
-\textbf{Aktivität}          & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
-Bluetooth-Connection        & 50 & 40 & -10\\
-Desktop-Applikation         & 20 & 20 & -\\
-Freedom-Board Kommunikation & 30 & 35 & +5\\
-Android Zusatzkomponenten   & 12 & 15 & +3\\
-Kamera-Komponente           & 12 & 8  & -4\\
-Winkelberechnung            & 6  & 14 & +8\\
-Mergen                      & 10 & 40 & +30\\
-Integrationstest            & 30 & 30 & -\\
-Wireless                    & 30 & 20 & -10\\
-\textbf{Gesamt} & \textbf{200} & \textbf{222} & \textbf{+22}\\
-                   &     &    & \\
-\rowcolor{gray}\multicolumn{4}{l}{\textbf{Gemeinsame Arbeiten am Funktionsmuster}}\\
-\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
-Optimierung/Parametereinstellung & 85  &  & \\
-Puffer                           & 100 &  & \\
-\textbf{Gesamt}                  &     &  & \\
+Nebst der Allgemeinen Projektplanung mittels eines Gantt-Diagrammes, wurde noch ein separater, 
+ausführlicher Soll-/ Ist-Zeitvergleich gemacht (siehe Tabelle \ref{tab:SollIstTabelle}). Hier sind die Arbeitsschritte der
+ Projektplanung eins zu eins oder zusammengefasst übernommen. Die geplante oder anfänglich geschätzte 
+ Zeit ist der tatsächlich aufgewendeten Zeit gegenübergestellt. So sind allfällige Abweichungen von 
+ der Planung gut ersichtlich. Wie in der Tabelle ersichtlich ist, wurde die nötige Zeit bei vielen Arbeitsschritten
+  anfänglich geringer geschätzt, als sie tatsächlich ausfiel. Dies kann mehrere Gründe haben. 
+  Zum einen ist die Schätzung zu nennen. Ist diese durch die verantwortliche Person zu gering angesetzt 
+  worden, schlägt sich das in einer Abweichung nieder. Zum andern können auch weitere, unvorhergesehene 
+  Arbeiten oder Probleme dazukommen, welche man bei der anfänglichen Schätzung noch nicht berücksichtigen konnte. 
+  Bei den allgemeinen Projektarbeiten konnte sehr von der ausführlichen Vorarbeit in PREN1 profitiert werden. Viele Dokumentvorlagen oder 
+  Abläufe konnten übernommen werden und spezifische Aufgaben waren bereits verteilt. Dadurch wurde nahezu 
+  20\% weniger Zeit aufgewendet, als anfänglich gedacht. In den einzelnen Disziplinen ist die effektiv 
+  aufgewendete Arbeitszeit durchgehend höher als geplant. Vieles war Neuland für die betreffenden Personen.
+  Von daher war zu erwarten, dass es gewisse Abweichungen gibt. Die abschliessenden Arbeiten wie Testen und 
+  Parametereinstellung wurden ganz klar unterschätzt. Hier stellten sich diverse Einstell- und Abstimmarbeiten 
+  als komplizierter dar, als anfangs geplant. Dies ist im fast doppelt so grossen Zeitaufwand auch gut ersichtlich. 
+  
+  
+ \begin{table}[h!]
+	\begin{zebratabular}{p{0.52\textwidth}p{0.1\textwidth}p{0.1\textwidth}p{0.15\textwidth}}
+	\rowcolor{gray}\multicolumn{4}{l}{\textbf{Allgemeine Projektarbeiten}}\\
+	\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
+	Input              & 28  & 28   & 0\\
+	Planungssitzungen  & 49  & 42 & -7\\
+	Dokumentation      & 200 &  150    & -50\\
+	Risikomanagement   & 10  & 5    & -5\\
+	Projektplanung     & 50  & 45   & -5\\
+	Plakat/Auftritt    & 10  &  12    & +2\\
+	Präsentation       & 30  &   28   & -2\\
+	\textbf{Gesamt}    & \textbf{377} &   \textbf{310}   & -\textbf{67}\\
+	                   &     &    & \\
+	\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Maschinentechnik}}\\
+	\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
+	Komponenten Tests  & 25  & 35 & +10\\
+	Produktion         & 80  & 90 & +10\\
+	Montage            & 40  & 40 & 0\\
+	Pläne/Zeichnungen/Grafiken  & 10   & 35 & +25\\
+	\textbf{Gesamt}    & \textbf{155} & \textbf{200} & +\textbf{45}\\
+	                   &     &    & \\
+	\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Elektrotechnik}}\\
+	\textbf{Aktivität}  & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
+	Schema              & 30 & 40  & +10\\
+	Print Prototyp      & 60 & 60  & 0\\
+	Print definitiv     & 15 & 15  & 0\\
+	Firmware            & 40 & 45  & +5\\
+	Stepper Board       & 12 & 8   & -4\\
+	DC Motor            & 3  & 8   & +5\\
+	Inbetriebnahme BLDC & 50 & 30  & -20\\
+	Inbetriebnahme      & 15 & 30  & +15\\
+	\textbf{Gesamt} & \textbf{225} & \textbf{236} & +\textbf{11}\\
+	                   &     &    & \\
+	\rowcolor{gray}\multicolumn{4}{l}{\textbf{Arbeiten Informatik}}\\
+	\textbf{Aktivität}          & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
+	Bluetooth-Connection        & 50 & 40 & -10\\
+	Desktop-Applikation         & 20 & 20 & 0\\
+	Freedom-Board Kommunikation & 30 & 35 & +5\\
+	Android Zusatzkomponenten   & 12 & 15 & +3\\
+	Kamera-Komponente           & 12 & 8  & -4\\
+	Winkelberechnung            & 6  & 14 & +8\\
+	Mergen                      & 10 & 40 & +30\\
+	Integrationstest            & 30 & 30 & 0\\
+	Wireless                    & 30 & 20 & -10\\
+	\textbf{Gesamt} & \textbf{200} & \textbf{222} & +\textbf{22}\\
+	                   &     &    & \\
+	\rowcolor{gray}\multicolumn{4}{l}{\textbf{Gemeinsame Arbeiten am Funktionsmuster}}\\
+	\textbf{Aktivität} & \textbf{Planung} & \textbf{Ist} & \textbf{Abweichung}\\
+	Optimierung/Parametereinstellung & 85  & 160 & +75\\
+	\textbf{Gesamt}                  &  \textbf{85}   & \textbf{160} & 	  +\textbf{75}\\
+	\end{zebratabular} 
+\centering
+\caption{Soll-/ Ist-Zeitvergleich in tabellarischer Darstellung}
+\label{tab:SollIstTabelle}
 
-
-
-
-
-\end{zebratabular} 
+	\end{table}
 
 %\begin{table}[h!]
 %    \begin{zebratabular}{p{0.10\textwidth}p{0.06\textwidth}p{0.25\textwidth}p{0.5\textwidth}}
