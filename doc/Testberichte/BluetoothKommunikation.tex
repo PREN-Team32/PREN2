@@ -1,0 +1,21 @@
+\subsection{Bluetooth-Kommunikation zwischen Smartphone und Desktop-PC}
+\begin{zebratabular}{p{4.5cm}p{\textwidth-5.3cm}}
+    \rule{0pt}{11pt}\textit{Tester}              & Livio Kunz \\ 
+    \rule{0pt}{11pt}\textit{Datum}:           & 09.04.2015   \\
+    \rule{0pt}{11pt}\textit{Ort}:             & Teaminsel \\
+    \rule{0pt}{11pt}\textit{Beschreibung}:          & Via Bluetooth werden die Konfigurations- und Resultatsdaten (Items)zwischen dem Smartphone und dem Desktop-PC ausgetauscht. Mit diesem Test 
+    verifiziert man das korrekte bidirektionale übermitteln, entpacken und verpacken der Items.	 \\
+    \rule{0pt}{11pt}\textit{Akteure}:          & Operator zur Bedienung des Smartphones \\
+    \rule{0pt}{11pt}\textit{Bedingung}:          & Lauffähiges Android-Phone mit 
+    Android-Applikation. Desktop-PC mit lauffähiger Desktop-App  \\
+    \rule{0pt}{11pt}\textit{Erwartete Fehlermeldung}:          & keine \\
+    \rule{0pt}{11pt}\textit{Vorgehen}:          & Applikationen auf beiden Geräten öffnen, Bluetooth auf beiden Geräten einschalten. Verbindung von Smartphone auf Desktop starten, Pairing bestätigen\\
+    \rule{0pt}{11pt}\textit{Erwartetes Ergebnis}:          & Serialisiertes Objekt wird empfangen und gelesen. \\
+    \rule{0pt}{11pt}\textit{Eingetretenes Ergebnis}:          & Serialisiertes Objekt wurde gesendet und 
+    erfolgreich deserialisiert. Alle Informationen enthalten. Bei mehrmaligem Senden trat Fehler auf. Objekt konnte nur einmal erfolgreich gesendet und empfangen werden!\\
+    \rule{0pt}{11pt}\textit{Test bestanden?}:          & Nein \\
+    \rule{0pt}{11pt}\textit{Weiter Tests nötig?}:          & Nein (Es wird auf Wireless(Websockets) umgestiegen) \\
+\end{zebratabular}    
+   
+
+   
