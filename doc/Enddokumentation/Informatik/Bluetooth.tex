@@ -3,8 +3,8 @@ Via Bluetooth konnten die serialisierten\footnote{Serialisierung: Daten liegen i
 Objekte zwischen Smartphone-App und DesktopViewer ausgetauscht werden. 
 Da Java keine native Bluetooth-Kommunikation ermöglicht, wurde auf der 
 Desktop Seite auf die BlueCove Library \cite{Inf:Bluecove} zugegriffen. Da der letzte Release der 
-BlueCove Library nicht mehr mit 64-Bit Betriebssystemen funktionierte, wurde ein spezieller Snapshot 
-\footnote{Momentaufnahme einer Software resp. keine offizielle Freigabe der Software} 
+BlueCove Library nicht mehr mit 64-Bit Betriebssystemen funktionierte, wurde ein spezieller 
+Snapshot\footnote{Momentaufnahme einer Software resp. keine offizielle Freigabe der Software} 
 verwendet, welcher auch auf 64-Bit Betriebssystemen lauffähig ist. Allerdings ist dieser Snapshot 
 kein offizieller Release.
 Android stellt bei der Programmierung eine native Bluetooth 
@@ -18,7 +18,7 @@ Android-App zur Desktop-App zu schicken, wurde das Objekt nicht erkannt, da der
 Stream noch die Informationen des vorher gesendeten ValueItems enthielt. 
 Da keine Möglichkeit gefunden wurde, den Stream zu flushen oder eine neue 
 Verbindung aufzubauen, ohne das Pairing der Geräte manuell zu bestätigen, wurde Bluetooth 
-nicht weiterverfolgt und die Alternative, Websockets \footnote{Auf TCP (Transmission Control Protocol) basiertes Netzwerkprotokoll, 
+nicht weiterverfolgt und die Alternative, Websockets\footnote{Auf TCP (Transmission Control Protocol) basiertes Netzwerkprotokoll, 
 um eine bidirektionale Verbindung zwischen zwei Geräten herzustellen} gewählt. 
 
             

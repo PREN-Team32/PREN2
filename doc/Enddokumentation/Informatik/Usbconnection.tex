@@ -14,9 +14,9 @@ ob mit der support-library das Senden eines einzelnen Strings (Char) zum Freedom
 Boards auf dem Bildschirm des Smartphones ausgegeben werden kann. Nach einem Testlauf zeigte sich, dass
 das Senden des Chars soweit nachvollziehbar einwandfrei funktioniert. Beim Empfangen der Daten zeigte 
 sich, dass beim parsen der Bytes im Code der support-library ein oder zwei Bits falsch gesetzt wurden. 
-Das hatte zur Folge, dass gewisse Buchstaben oder Zahlen nicht mehr korrekt in ASCII 
-\footnote{American Standard Code for Information Interchange} respektive UTF-8 
-\footnote{Universal Coded Character Set + Transformation Format—8-bit}
+Das hatte zur Folge, dass gewisse Buchstaben oder Zahlen nicht mehr korrekt in ASCII\footnote{American 
+Standard Code for Information Interchange} respektive UTF-8\footnote{Universal Coded Character Set + 
+Transformation Format—8-bit}
 umgewandelt werden konnten. Bei einer Handvoll Buchstaben und Zahlen (f, z, o, w, 2-8) funktionierte die
 Echo-Methode einwandfrei, bei allen anderen Zeichen jedoch nicht.
 
@@ -32,7 +32,7 @@ Nach einem Update Mitte Februar 2015 durch den Entwickler der support-library fu
 in bidirektionaler Richtung ohne Einschränkungen. Teil des Updates (respektive einziger Grund) war die 
 Erweiterung der unterstützten Geräte um die CH34xSerialDevice-Schnittstelle. Damit erklärt sich auch das 
 Fehlverhalten der  App vor dem Update, als die Bits nur bruchstückweise richtig geparst wurden. Es lag 
-an der damals schon vorhandenen Schnittstelle zu der CDC-Geräte-Gruppe \footnote{Communication Device Class}, 
+an der damals schon vorhandenen Schnittstelle zu der CDC-Geräte-Gruppe\footnote{Communication Device Class}, 
 die nicht alle Geräte voll, sondern nur teilweise unterstütze. Zu einem dieser nicht vollumfänglich 
 unterstützen Typen gehörte das Freedom-Board.
 Der Code aus dem  Prototyp-App wird nun gewissermassen als Komponente zur Kommunikation mit dem USB-Gerät
