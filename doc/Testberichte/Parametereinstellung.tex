@@ -1,0 +1,33 @@
+\subsection{BLDC-Parameter Test}
+\begin{zebratabular}{p{4.5cm}p{\textwidth-5.3cm}}
+	\rule{0pt}{11pt}\textit{Tester}           & Yves Studer und Pascal Roth \\ 
+	\rule{0pt}{11pt}\textit{Datum}:           & 30.05.2015\\
+	\rule{0pt}{11pt}\textit{Beschreibung}:    & Das Ziel des Testes besteht darin, die besten 
+	Einstellung für den PID-Regler in den BLDC-Borads, die Drehzahlen der Ballbeschleunigung 
+	und die Geschwindigkeit der Förderband Zuführung zu finden. Dies ist ein grosser und 
+	aufwändiger Test, indem jeder Parameter die anderen beeinflusst. Aus diesem Grund ist 
+	dieser Test gross.\\
+	\rule{0pt}{11pt}\textit{Akteure}:         & Gesamter Aufbau mit Test-Tennisbälle und dem 
+	offiziellen Spielfeld\\
+	\rule{0pt}{11pt}\textit{Bedingung}:       & Dieser Test musste unter annähernd Wettkampf-
+	Bedingungen durchgeführt werden.\\
+	\rule{0pt}{11pt}\textit{Erwartete Fehlermeldung}: & keine \\
+	\rule{0pt}{11pt}\textit{Vorgehen}:        & Es wurden einzelne Bälle verschossen und die 
+	Reaktion des Regler (Überschwingen und Zeit der Ausregelung) beobachtet. Anhand dieser 
+	Beobachtungen wurden die entsprechenden Parameter $P$, $I$ und Drehzahl des Reglers 
+	angepasst. Ein $D$-Anteil hat zum sofortigen Schwingen des Reglers geführt. Sobald die 
+	Grössenordung der Parameter feststanden, kam die Einstellung der Förderbandgeschwindigkeit 
+	dazu, was wiederum Einfluss auf die Reglerparameter hatte. Für die Nachführung der Bälle 
+	wurden alle 5 Bälle wie unter Wettkampfbedingung sequenziell so schnell wie möglich 
+	verschossen. Danach galt es noch den Einfluss der Korbposition (Mitte und am Rand) auf die 
+	Drehzahl der Ballbeschleunigung zu ermitteln, damit eine zuverlässige Trefferrate erreicht 
+	werden kann.\\
+	\rule{0pt}{11pt}\textit{Erwartetes Ergebnis}: & Einen guten Mittelweg zwischen machbarer 
+	Regelung und Geschwindigkeit.\\
+	\rule{0pt}{11pt}\textit{Eingetretenes Ergebnis}: & Der erste Ball geht immer zu wenig weit. 
+	Dieser erste Ball wirkt als Störung auf den Regler worauf dieser hoch regelt. Während dieser 
+	Phase werden die anderen Bälle verschossen, die reproduzierbar den Korb treffen. Die erwartete 
+	Trefferquote liegt bei 4 von 5 Bälle. Es stellte sich heraus, das ein reiner PI-Regler ohne
+	Feedforward am besten ist. die Ballnachführung läuft mit 35\% PWM.\\
+	\rule{0pt}{11pt}\textit{Test bestanden?}:     & nahezu ja \\
+\end{zebratabular}
