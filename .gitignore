@@ -10,3 +10,5 @@ doc/Dokumentation.log
 *.blg
 *.bbl
 common/texput.log
+*.lof
+*.lot
