@@ -10,7 +10,7 @@
     \rule{0pt}{11pt}\textit{Erwartete Fehlermeldung}:          & keine \\
     \rule{0pt}{11pt}\textit{Vorgehen}:          & Applikationen auf beiden Geräten öffnen, Wireless beim 
     Android-Phone einschalten. Verbindung von Desktop Seite starten. Korb in 5 cm Schritten auf verschiedenen Positionen aufstellen und den Erkennungsmechanismus starten. \\
-    \rule{0pt}{11pt}\textit{Erwartetes Ergebnis}:          & Korb wird erkannt und Winkel ausgegeben, Links und Rechte Seiten weisen keine signifikanten Abweichungen auf \\
+    \rule{0pt}{11pt}\textit{Erwartetes Ergebnis}:          & Korb wird erkannt und Winkel ausgegeben, Links und Rechte Seiten weisen keine signifikanten Abweichungen auf \ref{tab:Korberkennungwinkel} \\
     \rule{0pt}{11pt}\textit{Eingetretenes Ergebnis}:          & Der Winkel wurde korrekt berechnet und Abweichungen waren marginal \\
     \rule{0pt}{11pt}\textit{Test bestanden?}:          & Ja \\
     \rule{0pt}{11pt}\textit{Weiter Tests nötig?}:          & Nein, Korberkennung ist sehr genau. \\
@@ -18,8 +18,12 @@
    
 
 \begin{table}[htbp]
-    \begin{zebratabular}{ll}    
-    \rowcolor{gray}cm (von Rechts) & Winkel(Grad)  \\    
+  \centering
+  \caption{Winkelberechnung Test}
+    \begin{tabular}{ll}
+    
+    cm (von Rechts) & Winkel(Grad)  \\
+    
     0     & 18.41 \\
     5     & 17.01 \\
     10    & 15.51 \\
@@ -44,9 +48,8 @@
     105   & -15.07 \\
     110   & -16.5 \\
     115   & -18.02 \\
-    120   & -19.45 \\    
-    \end{zebratabular}%
-    \label{tab:addlabel}%
-    \centering
-    \caption{Winkelberechnung Test}
+    120   & -19.45 \\
+    
+    \end{tabular}%
+  \label{tab:Korberkennungwinkel}%
 \end{table}%
