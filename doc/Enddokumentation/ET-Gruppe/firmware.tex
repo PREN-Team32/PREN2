@@ -84,7 +84,7 @@ Messdauer von 349.5\si{\milli\second} möglich.
 \ifEMBED
 \paragraph{Kommunikation zum Host}$~~$\vspace{2mm}\\
 \fi
-Zur Interaktion mit dem BLDC-Board wird die SPI1-Schnittstelle des $\mu C$ verwendet. Dabei
+Zur Interaktion mit dem BLDC-Board wird die SPI1-Schnittstelle des \si{\micro}C verwendet. Dabei
 ist das SPI-Interface im 8 Bit Mode mit LSB-First konfiguriert. Zusätzlich zu dieser Schnittstelle
 ist eine IRQ-Leitung vorhanden, mit der das BLDC-Board den Host triggern kann, um auf ein Problem 
 hinzuweisen. Die Steckerbelegung ist in Tabelle \ref{tab:SPI_stecker} ersichtlich.
@@ -207,7 +207,7 @@ $F_{\text{Vorsteuerung}} = 0$.
 Als Feedback wird die Zeit, die für die Kommutierung bereits besprochen wurde, 
 verwendet. Damit kurzfristige Unregelmässigkeiten gedämpft werden, wird das 
 Feedback durch ein FIR-Filter\footnote{Finite Impulse Response Filter, Ein 
-Filter mit garantierter endlichen Antwort auf ein Impuls} gefiltert. Der 
+Filter mit garantierter endlicher Antwort auf einen Impuls} gefiltert. Der 
 Ausgang dieses Filters wird mittels eines Korrekturfaktor in RPM umgerechnet. 
 Dieser Wert wird mit der Sollgrösse verrechnet und dem Regler zugeführt.
 \tikzstyle{crosspoint}   = [circle, minimum size=0.15cm, inner sep=0pt, draw=black, fill=black]
