@@ -97,7 +97,9 @@
         Hersteller Freescale, Typ FRDM-KL25Z} gesteuert. Dieses Board hat einen internen UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver 
         \textbf{T}ransmitter, eine serielle Schnittstelle} to USB Converter, über diesen 
         das Smartphone mit dem Freedom-Board kommuniziert. Die Software des Boards besteht aus einem 
-        Betriebssystem, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
+        embedded Betriebssystem FreeRTOS\footnote{FreeRTOS ist ein Open-Source-Echtzeitbetriebssystem 
+        für embedded Systeme. Es basiert auf einer Mikrokernelarchitektur und wurde auf verschiedene 
+        Mikrocontroller portiert.}, dessen Haupttask kontinuierlich den UART Eingangspuffer abruft 
         und die angekommenen Befehle ausführt. Ein wichtiger, nur einmal gebrauchter Task, 
         ist die Initialisierung des Stepperboards, siehe Kapitel \ref{sec:StepperAnsteuerung}. Der Controller 
         verfügt über zwei SPI\footnote{Serial Peripheral Interface, ein synchroner serieller Datenbus }-Schnittstellen. An einer ist das besagte Stepperboard und 
@@ -107,8 +109,8 @@
 
    
     \subsection{Spannungsversorgung}       
-        \begin{wrapfigure}{r}{0.35\textwidth}
-           	\includegraphics[width=0.35\textwidth,clip,trim=0mm 0.5mm 0mm 0mm]
+        \begin{wrapfigure}{r}{0.45\textwidth}
+           	\includegraphics[width=0.40\textwidth,clip,trim=0mm 0.5mm 0mm 0mm]
            	{Enddokumentation/Bilder/BeschaltungNetzteile.png}
            	\centering
            	\caption{Schema der Spannungsversorgung} 
@@ -116,14 +118,13 @@
         \end{wrapfigure}
         Gemäss Datenblatt sind die verwendeten Brushless-Motoren mit einer Versorgungsspannung 
         von $12\si{\volt}$ bei einem maximalen Strom von $11\si{\ampere}$ spezifiziert. 
-        Der Steppermotor und der DC-Motor sind gemäss Datenblatt für das Betriebsspannung FreeRTOS 
+        Der Steppermotor und der DC-Motor sind gemäss Datenblatt für das Betriebsspannung  
         von $24\si{\volt}$ ausgelegt. Die Spannungsversorgung wird mit zwei Server-Netzteilen 
         realisiert, die je $12\si{\volt}$ mit maximal $60\si{\ampere}$ liefern. Aus 
         Sicherheitsgründen wird für jeden Motor eine separate Sicherung verwendet. Das Schema 
         in Abbildung \ref{abb:Spannungsversorgung} zeigt, wie die Spannungsversorgung 
         umgesetzt ist. Das Freedom-Board wird über USB vom Akkumulator des Smartphones 
-        gespeist. Sämtliche Datenblätter zu den verwendeten Motoren sind im Anhangsdokument in den Kapiteln ?? 
-        angefügt. Das zweite Netzteil wurde so umgebaut, dass es potentialfrei arbeitet. So 
+        gespeist. Das zweite Netzteil wurde so umgebaut, dass es potentialfrei arbeitet. So 
         ist es möglich, dass es die $12\si{\volt}$ auf die Spannung des ersten Netzteils 
         generieren kann. Die Sicherung zwischen den beiden Netzteilen ist als Sicherheit 
-        hinzugefügt für den Fall, dass es Probleme mit der Potentialfreiheit gibt.	
+        hinzugefügt für den Fall, dass es Probleme mit der Potentialfreiheit gibt.
