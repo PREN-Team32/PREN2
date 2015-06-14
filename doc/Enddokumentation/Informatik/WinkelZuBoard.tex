@@ -13,9 +13,9 @@ damit man den Winkel anschliessend in die Anzahl MircoSteps des Schrittmotors um
 
 Aus diesem Bild wird nun mittels Trigonometrie der Winkel berechnet. 
 Dazu wird zuerst die Länge Gegenkathete (siehe G in Abbildung \ref{abb:UebersichtWinkelberechnung}) 
-aus dem Schwarz/Weiss Bild berechnet. Ausgehend vom der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
+aus dem Schwarz/Weiss Bild berechnet. Ausgehend von der Mitte des Spielfelds kann die Distanz zum Mittelpunkt des 
 Korbs bestimmt werden. Diese Länge liegt zuerst als Anzahl Pixel vor, 
-kann anschliessend mit einem (variablen) Umrechnungsverhältnis Pixel zu Zentimeter in Zentimeter umgerechnet werden.
+kann anschliessend mit einem (variablen) Umrechnungsverhältnis in Zentimeter umgerechnet werden.
 Die Ankathete (siehe A in Abbildung \ref{abb:UebersichtWinkelberechnung}) ist durch das Spielfeld auf die Länge von 170 cm fixiert.
 Mit diesen beiden Werten lässt sich nun mit dem Arkustangens der resultierende Winkel errechnen.
 Dieser Winkel kann mit dem Umrechnungsverhältnis (siehe Kapitel \ref{sec:Aufloesung}) von Microsteps zu Grad 
@@ -34,7 +34,7 @@ Da die Hypotenuse mit der Länge der Gegenkathete und damit auch mit grösserem 
 hat dies auch eine Verlängerung der Wurfdistanz zur Folge. Um diesem Umstand Rechnung zu tragen, muss die Drehzahl des 
 Brushless-DC-Motors entsprechend dem Winkel angepasst werden. Weil das Gerät symmetrisch in der Mitte des Spielfelds platziert ist, 
 kann das Vorzeichen des Winkels ausser Acht gelassen werden, denn auf beide Seiten nimmt die Distanz im selben Masse zu.
-Dazu wird die folgende Formel, die bei linearem Ansteog der Dreahzal gilt, verwendet:
+Dazu wird die folgende Formel, die bei linearem Anstieg der Drehzahl gilt, verwendet:
 \begin{equation}
 RPM = RPM_{min} +  \left( \frac{RPM_{max} -RPM_{min}}{Winkel_{max}} \cdot |\text{berechneter Winkel}| \right)
 \end{equation}
